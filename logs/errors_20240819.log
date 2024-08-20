@@ -1,0 +1,106 @@
+L 08/19/2024 - 17:41:44: SourceMod error session started
+L 08/19/2024 - 17:41:44: Info (map "ctf_2fort") (file "/home/davidn/Documents/Servers/IncrementalFortressTest/tf/addons/sourcemod/logs/errors_20240819.log")
+L 08/19/2024 - 17:41:44: [SM] Unable to load extension "sigsegv.ext": /home/davidn/Documents/Servers/IncrementalFortressTest/tf/addons/sourcemod/extensions/sigsegv.ext.so: cannot open shared object file: No such file or directory
+L 08/19/2024 - 17:41:44: [SM] Unable to load extension "sigsegv-optimize-only.ext": /home/davidn/Documents/Servers/IncrementalFortressTest/tf/addons/sourcemod/extensions/sigsegv-optimize-only.ext.so: cannot open shared object file: No such file or directory
+L 08/19/2024 - 17:43:38: SourceMod error session started
+L 08/19/2024 - 17:43:38: Info (map "ctf_well") (file "/home/davidn/Documents/Servers/IncrementalFortressTest/tf/addons/sourcemod/logs/errors_20240819.log")
+L 08/19/2024 - 17:43:38: [SM] Unable to load extension "sigsegv.ext": /home/davidn/Documents/Servers/IncrementalFortressTest/tf/addons/sourcemod/extensions/sigsegv.ext.so: cannot open shared object file: No such file or directory
+L 08/19/2024 - 17:43:38: [SM] Unable to load extension "sigsegv-optimize-only.ext": /home/davidn/Documents/Servers/IncrementalFortressTest/tf/addons/sourcemod/extensions/sigsegv-optimize-only.ext.so: cannot open shared object file: No such file or directory
+L 08/19/2024 - 17:47:10: [SM] Exception reported: Entity 12 (12) is invalid
+L 08/19/2024 - 17:47:10: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 17:47:10: [SM] Call stack trace:
+L 08/19/2024 - 17:47:10: [SM]   [0] GetEntPropString
+L 08/19/2024 - 17:47:10: [SM]   [1] Line 768, entity::GetEntityClassname
+L 08/19/2024 - 17:47:10: [SM]   [2] Line 26, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowSubcategories
+L 08/19/2024 - 17:47:10: [SM]   [3] Line 9, IncrementalFortress/MenuBackend.sp::MenuHandler_SlotChoice
+L 08/19/2024 - 17:47:11: [SM] Exception reported: Entity 11 (11) is invalid
+L 08/19/2024 - 17:47:11: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 17:47:11: [SM] Call stack trace:
+L 08/19/2024 - 17:47:11: [SM]   [0] GetEntPropString
+L 08/19/2024 - 17:47:11: [SM]   [1] Line 768, entity::GetEntityClassname
+L 08/19/2024 - 17:47:11: [SM]   [2] Line 26, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowSubcategories
+L 08/19/2024 - 17:47:11: [SM]   [3] Line 9, IncrementalFortress/MenuBackend.sp::MenuHandler_SlotChoice
+L 08/19/2024 - 17:47:12: [SM] Exception reported: Entity 11 (11) is invalid
+L 08/19/2024 - 17:47:12: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 17:47:12: [SM] Call stack trace:
+L 08/19/2024 - 17:47:12: [SM]   [0] GetEntPropString
+L 08/19/2024 - 17:47:12: [SM]   [1] Line 768, entity::GetEntityClassname
+L 08/19/2024 - 17:47:12: [SM]   [2] Line 26, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowSubcategories
+L 08/19/2024 - 17:47:12: [SM]   [3] Line 9, IncrementalFortress/MenuBackend.sp::MenuHandler_SlotChoice
+L 08/19/2024 - 17:47:52: [SM] Exception reported: Entity -1 (-1) is invalid
+L 08/19/2024 - 17:47:52: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 17:47:52: [SM] Call stack trace:
+L 08/19/2024 - 17:47:52: [SM]   [0] GetEntPropString
+L 08/19/2024 - 17:47:52: [SM]   [1] Line 768, entity::GetEntityClassname
+L 08/19/2024 - 17:47:52: [SM]   [2] Line 26, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowSubcategories
+L 08/19/2024 - 17:47:52: [SM]   [3] Line 9, IncrementalFortress/MenuBackend.sp::MenuHandler_SlotChoice
+L 08/19/2024 - 17:52:06: [SM] Exception reported: Entity 19 (19) is invalid
+L 08/19/2024 - 17:52:06: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 17:52:06: [SM] Call stack trace:
+L 08/19/2024 - 17:52:06: [SM]   [0] GetEntPropString
+L 08/19/2024 - 17:52:06: [SM]   [1] Line 768, entity::GetEntityClassname
+L 08/19/2024 - 17:52:06: [SM]   [2] Line 26, IncrementalFortress/Events.sp::Event_InventoryRefresh
+L 08/19/2024 - 17:52:08: [SM] Exception reported: Entity -1 (-1) is invalid
+L 08/19/2024 - 17:52:08: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 17:52:08: [SM] Call stack trace:
+L 08/19/2024 - 17:52:08: [SM]   [0] GetEntPropString
+L 08/19/2024 - 17:52:08: [SM]   [1] Line 768, entity::GetEntityClassname
+L 08/19/2024 - 17:52:08: [SM]   [2] Line 26, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowSubcategories
+L 08/19/2024 - 17:52:08: [SM]   [3] Line 9, IncrementalFortress/MenuBackend.sp::MenuHandler_SlotChoice
+L 08/19/2024 - 17:53:41: [SM] Exception reported: String formatted incorrectly - parameter 3 (total 2)
+L 08/19/2024 - 17:53:41: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 17:53:41: [SM] Call stack trace:
+L 08/19/2024 - 17:53:41: [SM]   [0] PrintToServer
+L 08/19/2024 - 17:53:41: [SM]   [1] Line 25, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowSubcategories
+L 08/19/2024 - 17:53:41: [SM]   [2] Line 9, IncrementalFortress/MenuBackend.sp::MenuHandler_SlotChoice
+L 08/19/2024 - 17:53:42: [SM] Exception reported: String formatted incorrectly - parameter 3 (total 2)
+L 08/19/2024 - 17:53:42: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 17:53:42: [SM] Call stack trace:
+L 08/19/2024 - 17:53:42: [SM]   [0] PrintToServer
+L 08/19/2024 - 17:53:42: [SM]   [1] Line 25, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowSubcategories
+L 08/19/2024 - 17:53:42: [SM]   [2] Line 9, IncrementalFortress/MenuBackend.sp::MenuHandler_SlotChoice
+L 08/19/2024 - 18:20:26: [SM] Exception reported: Array index out-of-bounds (index -1, limit 60)
+L 08/19/2024 - 18:20:26: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 18:20:26: [SM] Call stack trace:
+L 08/19/2024 - 18:20:26: [SM]   [1] Line 58, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowUpgrades
+L 08/19/2024 - 18:20:26: [SM]   [2] Line 19, IncrementalFortress/MenuBackend.sp::MenuHandler_SubcategoryChoice
+L 08/19/2024 - 18:27:42: [SM] Exception reported: Array index out-of-bounds (index -1, limit 60)
+L 08/19/2024 - 18:27:42: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 18:27:42: [SM] Call stack trace:
+L 08/19/2024 - 18:27:42: [SM]   [1] Line 59, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowUpgrades
+L 08/19/2024 - 18:27:42: [SM]   [2] Line 19, IncrementalFortress/MenuBackend.sp::MenuHandler_SubcategoryChoice
+L 08/19/2024 - 18:27:47: [SM] Exception reported: Array index out-of-bounds (index -1, limit 60)
+L 08/19/2024 - 18:27:47: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 18:27:47: [SM] Call stack trace:
+L 08/19/2024 - 18:27:47: [SM]   [1] Line 59, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowUpgrades
+L 08/19/2024 - 18:27:47: [SM]   [2] Line 19, IncrementalFortress/MenuBackend.sp::MenuHandler_SubcategoryChoice
+L 08/19/2024 - 18:27:51: [SM] Exception reported: Array index out-of-bounds (index -1, limit 60)
+L 08/19/2024 - 18:27:51: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 18:27:51: [SM] Call stack trace:
+L 08/19/2024 - 18:27:51: [SM]   [1] Line 59, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowUpgrades
+L 08/19/2024 - 18:27:51: [SM]   [2] Line 19, IncrementalFortress/MenuBackend.sp::MenuHandler_SubcategoryChoice
+L 08/19/2024 - 18:28:52: [SM] Exception reported: Array index out-of-bounds (index -1, limit 60)
+L 08/19/2024 - 18:28:52: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 18:28:52: [SM] Call stack trace:
+L 08/19/2024 - 18:28:52: [SM]   [1] Line 60, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowUpgrades
+L 08/19/2024 - 18:28:52: [SM]   [2] Line 19, IncrementalFortress/MenuBackend.sp::MenuHandler_SubcategoryChoice
+L 08/19/2024 - 18:31:09: [SM] Exception reported: Array index out-of-bounds (index -1, limit 60)
+L 08/19/2024 - 18:31:09: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 18:31:09: [SM] Call stack trace:
+L 08/19/2024 - 18:31:09: [SM]   [1] Line 60, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowUpgrades
+L 08/19/2024 - 18:31:09: [SM]   [2] Line 19, IncrementalFortress/MenuBackend.sp::MenuHandler_SubcategoryChoice
+L 08/19/2024 - 18:35:10: [SM] Exception reported: Array index out-of-bounds (index -1, limit 60)
+L 08/19/2024 - 18:35:10: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 18:35:10: [SM] Call stack trace:
+L 08/19/2024 - 18:35:10: [SM]   [1] Line 60, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowUpgrades
+L 08/19/2024 - 18:35:10: [SM]   [2] Line 19, IncrementalFortress/MenuBackend.sp::MenuHandler_SubcategoryChoice
+L 08/19/2024 - 18:37:00: [SM] Exception reported: Array index out-of-bounds (index -1, limit 60)
+L 08/19/2024 - 18:37:00: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 18:37:00: [SM] Call stack trace:
+L 08/19/2024 - 18:37:00: [SM]   [1] Line 63, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowUpgrades
+L 08/19/2024 - 18:37:00: [SM]   [2] Line 19, IncrementalFortress/MenuBackend.sp::MenuHandler_SubcategoryChoice
+L 08/19/2024 - 18:37:12: [SM] Exception reported: Array index out-of-bounds (index -1, limit 60)
+L 08/19/2024 - 18:37:12: [SM] Blaming: IncrementalFortress.smx
+L 08/19/2024 - 18:37:12: [SM] Call stack trace:
+L 08/19/2024 - 18:37:12: [SM]   [1] Line 62, IncrementalFortress/MenuFrontend.sp::UpgradeMenuShowUpgrades
+L 08/19/2024 - 18:37:12: [SM]   [2] Line 19, IncrementalFortress/MenuBackend.sp::MenuHandler_SubcategoryChoice

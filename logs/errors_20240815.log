@@ -1,0 +1,160 @@
+L 08/15/2024 - 11:41:56: SourceMod error session started
+L 08/15/2024 - 11:41:56: Info (map "koth_nucleus") (file "/home/davidn/Documents/Servers/IncrementalFortressTest/tf/addons/sourcemod/logs/errors_20240815.log")
+L 08/15/2024 - 11:41:56: [SM] Exception reported: Array index out-of-bounds (index -1, limit 64)
+L 08/15/2024 - 11:41:56: [SM] Blaming: IncrementalFortress.smx
+L 08/15/2024 - 11:41:56: [SM] Call stack trace:
+L 08/15/2024 - 11:41:56: [SM]   [1] Line 129, IncrementalFortress/ConfigSystem.sp::LoadCategoryLists
+L 08/15/2024 - 11:41:56: [SM]   [2] Line 137, IncrementalFortress/ConfigSystem.sp::LoadCategoryLists
+L 08/15/2024 - 11:41:56: [SM]   [3] Line 137, IncrementalFortress/ConfigSystem.sp::LoadCategoryLists
+L 08/15/2024 - 11:41:56: [SM]   [4] Line 17, IncrementalFortress/ConfigSystem.sp::LoadConfigurationFiles
+L 08/15/2024 - 11:41:56: [SM]   [5] Line 2, IncrementalFortress/OnPluginStart.sp::OnPluginStart
+L 08/15/2024 - 11:42:36: [SM] Exception reported: Array index out-of-bounds (index -1, limit 64)
+L 08/15/2024 - 11:42:36: [SM] Blaming: IncrementalFortress.smx
+L 08/15/2024 - 11:42:36: [SM] Call stack trace:
+L 08/15/2024 - 11:42:36: [SM]   [1] Line 129, IncrementalFortress/ConfigSystem.sp::LoadCategoryLists
+L 08/15/2024 - 11:42:36: [SM]   [2] Line 137, IncrementalFortress/ConfigSystem.sp::LoadCategoryLists
+L 08/15/2024 - 11:42:36: [SM]   [3] Line 137, IncrementalFortress/ConfigSystem.sp::LoadCategoryLists
+L 08/15/2024 - 11:42:36: [SM]   [4] Line 17, IncrementalFortress/ConfigSystem.sp::LoadConfigurationFiles
+L 08/15/2024 - 11:42:36: [SM]   [5] Line 2, IncrementalFortress/OnPluginStart.sp::OnPluginStart
+L 08/15/2024 - 11:42:36: [SM]   [7] ServerExecute
+L 08/15/2024 - 11:42:36: [SM]   [8] Line 510, H:\_To_games\Left4Dead_2\My_mods\Admin-Security\ReloadPlugins\scripting\autoreload.sp::Timer_ReloadDelayed
+L 08/15/2024 - 12:04:52: SourceMod error session started
+L 08/15/2024 - 12:04:52: Info (map "cp_yukon_final") (file "/home/davidn/Documents/Servers/IncrementalFortressTest/tf/addons/sourcemod/logs/errors_20240815.log")
+L 08/15/2024 - 12:04:52: [SM] Exception reported: Array index out-of-bounds (index -1, limit 64)
+L 08/15/2024 - 12:04:52: [SM] Blaming: IncrementalFortress.smx
+L 08/15/2024 - 12:04:52: [SM] Call stack trace:
+L 08/15/2024 - 12:04:52: [SM]   [1] Line 129, IncrementalFortress/ConfigSystem.sp::LoadCategoryLists
+L 08/15/2024 - 12:04:52: [SM]   [2] Line 137, IncrementalFortress/ConfigSystem.sp::LoadCategoryLists
+L 08/15/2024 - 12:04:52: [SM]   [3] Line 137, IncrementalFortress/ConfigSystem.sp::LoadCategoryLists
+L 08/15/2024 - 12:04:52: [SM]   [4] Line 17, IncrementalFortress/ConfigSystem.sp::LoadConfigurationFiles
+L 08/15/2024 - 12:04:52: [SM]   [5] Line 2, IncrementalFortress/OnPluginStart.sp::OnPluginStart
+L 08/15/2024 - 12:13:57: SourceMod error session started
+L 08/15/2024 - 12:13:57: Info (map "sd_doomsday") (file "/home/davidn/Documents/Servers/IncrementalFortressTest/tf/addons/sourcemod/logs/errors_20240815.log")
+L 08/15/2024 - 12:13:57: [SM] Exception reported: Entity 475 is not a weapon (param 1)
+L 08/15/2024 - 12:13:57: [SM] Blaming: tf2utils.smx
+L 08/15/2024 - 12:13:57: [SM] Call stack trace:
+L 08/15/2024 - 12:13:57: [SM]   [0] ThrowNativeError
+L 08/15/2024 - 12:13:57: [SM]   [1] Line 1016, scripting/tf2utils.sp::GetNativeWeaponEntity
+L 08/15/2024 - 12:13:57: [SM]   [2] Line 680, scripting/tf2utils.sp::Native_GetWeaponSlot
+L 08/15/2024 - 12:13:57: [SM]   [4] TF2Util_GetWeaponSlot
+L 08/15/2024 - 12:13:57: [SM]   [5] Line 3, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:13:57: [SM] Exception reported: Entity 479 is not a weapon (param 1)
+L 08/15/2024 - 12:13:57: [SM] Blaming: tf2utils.smx
+L 08/15/2024 - 12:13:57: [SM] Call stack trace:
+L 08/15/2024 - 12:13:57: [SM]   [0] ThrowNativeError
+L 08/15/2024 - 12:13:57: [SM]   [1] Line 1016, scripting/tf2utils.sp::GetNativeWeaponEntity
+L 08/15/2024 - 12:13:57: [SM]   [2] Line 680, scripting/tf2utils.sp::Native_GetWeaponSlot
+L 08/15/2024 - 12:13:57: [SM]   [4] TF2Util_GetWeaponSlot
+L 08/15/2024 - 12:13:57: [SM]   [5] Line 3, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:13:57: [SM] Exception reported: Entity 481 is not a weapon (param 1)
+L 08/15/2024 - 12:13:57: [SM] Blaming: tf2utils.smx
+L 08/15/2024 - 12:13:57: [SM] Call stack trace:
+L 08/15/2024 - 12:13:57: [SM]   [0] ThrowNativeError
+L 08/15/2024 - 12:13:57: [SM]   [1] Line 1016, scripting/tf2utils.sp::GetNativeWeaponEntity
+L 08/15/2024 - 12:13:57: [SM]   [2] Line 680, scripting/tf2utils.sp::Native_GetWeaponSlot
+L 08/15/2024 - 12:13:57: [SM]   [4] TF2Util_GetWeaponSlot
+L 08/15/2024 - 12:13:57: [SM]   [5] Line 3, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:13:58: [SM] Exception reported: Entity 470 is not a weapon (param 1)
+L 08/15/2024 - 12:13:58: [SM] Blaming: tf2utils.smx
+L 08/15/2024 - 12:13:58: [SM] Call stack trace:
+L 08/15/2024 - 12:13:58: [SM]   [0] ThrowNativeError
+L 08/15/2024 - 12:13:58: [SM]   [1] Line 1016, scripting/tf2utils.sp::GetNativeWeaponEntity
+L 08/15/2024 - 12:13:58: [SM]   [2] Line 680, scripting/tf2utils.sp::Native_GetWeaponSlot
+L 08/15/2024 - 12:13:58: [SM]   [4] TF2Util_GetWeaponSlot
+L 08/15/2024 - 12:13:58: [SM]   [5] Line 3, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:13:58: [SM] Exception reported: Entity 472 is not a weapon (param 1)
+L 08/15/2024 - 12:13:58: [SM] Blaming: tf2utils.smx
+L 08/15/2024 - 12:13:58: [SM] Call stack trace:
+L 08/15/2024 - 12:13:58: [SM]   [0] ThrowNativeError
+L 08/15/2024 - 12:13:58: [SM]   [1] Line 1016, scripting/tf2utils.sp::GetNativeWeaponEntity
+L 08/15/2024 - 12:13:58: [SM]   [2] Line 680, scripting/tf2utils.sp::Native_GetWeaponSlot
+L 08/15/2024 - 12:13:58: [SM]   [4] TF2Util_GetWeaponSlot
+L 08/15/2024 - 12:13:58: [SM]   [5] Line 3, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:13:58: [SM] Exception reported: Entity 474 is not a weapon (param 1)
+L 08/15/2024 - 12:13:58: [SM] Blaming: tf2utils.smx
+L 08/15/2024 - 12:13:58: [SM] Call stack trace:
+L 08/15/2024 - 12:13:58: [SM]   [0] ThrowNativeError
+L 08/15/2024 - 12:13:58: [SM]   [1] Line 1016, scripting/tf2utils.sp::GetNativeWeaponEntity
+L 08/15/2024 - 12:13:58: [SM]   [2] Line 680, scripting/tf2utils.sp::Native_GetWeaponSlot
+L 08/15/2024 - 12:13:58: [SM]   [4] TF2Util_GetWeaponSlot
+L 08/15/2024 - 12:13:58: [SM]   [5] Line 3, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:13:58: [SM] Exception reported: Entity 476 is not a weapon (param 1)
+L 08/15/2024 - 12:13:58: [SM] Blaming: tf2utils.smx
+L 08/15/2024 - 12:13:58: [SM] Call stack trace:
+L 08/15/2024 - 12:13:58: [SM]   [0] ThrowNativeError
+L 08/15/2024 - 12:13:58: [SM]   [1] Line 1016, scripting/tf2utils.sp::GetNativeWeaponEntity
+L 08/15/2024 - 12:13:58: [SM]   [2] Line 680, scripting/tf2utils.sp::Native_GetWeaponSlot
+L 08/15/2024 - 12:13:58: [SM]   [4] TF2Util_GetWeaponSlot
+L 08/15/2024 - 12:13:58: [SM]   [5] Line 3, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:25:58: [SM] Exception reported: Entity 468 is not a weapon (param 1)
+L 08/15/2024 - 12:25:58: [SM] Blaming: tf2utils.smx
+L 08/15/2024 - 12:25:58: [SM] Call stack trace:
+L 08/15/2024 - 12:25:58: [SM]   [0] ThrowNativeError
+L 08/15/2024 - 12:25:58: [SM]   [1] Line 1016, scripting/tf2utils.sp::GetNativeWeaponEntity
+L 08/15/2024 - 12:25:58: [SM]   [2] Line 680, scripting/tf2utils.sp::Native_GetWeaponSlot
+L 08/15/2024 - 12:25:58: [SM]   [4] TF2Util_GetWeaponSlot
+L 08/15/2024 - 12:25:58: [SM]   [5] Line 3, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:25:58: [SM] Exception reported: Entity 470 is not a weapon (param 1)
+L 08/15/2024 - 12:25:58: [SM] Blaming: tf2utils.smx
+L 08/15/2024 - 12:25:58: [SM] Call stack trace:
+L 08/15/2024 - 12:25:58: [SM]   [0] ThrowNativeError
+L 08/15/2024 - 12:25:58: [SM]   [1] Line 1016, scripting/tf2utils.sp::GetNativeWeaponEntity
+L 08/15/2024 - 12:25:58: [SM]   [2] Line 680, scripting/tf2utils.sp::Native_GetWeaponSlot
+L 08/15/2024 - 12:25:58: [SM]   [4] TF2Util_GetWeaponSlot
+L 08/15/2024 - 12:25:58: [SM]   [5] Line 3, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:25:58: [SM] Exception reported: Entity 471 is not a weapon (param 1)
+L 08/15/2024 - 12:25:58: [SM] Blaming: tf2utils.smx
+L 08/15/2024 - 12:25:58: [SM] Call stack trace:
+L 08/15/2024 - 12:25:58: [SM]   [0] ThrowNativeError
+L 08/15/2024 - 12:25:58: [SM]   [1] Line 1016, scripting/tf2utils.sp::GetNativeWeaponEntity
+L 08/15/2024 - 12:25:58: [SM]   [2] Line 680, scripting/tf2utils.sp::Native_GetWeaponSlot
+L 08/15/2024 - 12:25:58: [SM]   [4] TF2Util_GetWeaponSlot
+L 08/15/2024 - 12:25:58: [SM]   [5] Line 3, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:31:18: [SM] Exception reported: Array index out-of-bounds (index -1, limit 8)
+L 08/15/2024 - 12:31:18: [SM] Blaming: IncrementalFortress.smx
+L 08/15/2024 - 12:31:18: [SM] Call stack trace:
+L 08/15/2024 - 12:31:18: [SM]   [1] Line 4, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:31:18: [SM] Exception reported: Array index out-of-bounds (index -1, limit 8)
+L 08/15/2024 - 12:31:18: [SM] Blaming: IncrementalFortress.smx
+L 08/15/2024 - 12:31:18: [SM] Call stack trace:
+L 08/15/2024 - 12:31:18: [SM]   [1] Line 4, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:31:19: [SM] Exception reported: Array index out-of-bounds (index -1, limit 8)
+L 08/15/2024 - 12:31:19: [SM] Blaming: IncrementalFortress.smx
+L 08/15/2024 - 12:31:19: [SM] Call stack trace:
+L 08/15/2024 - 12:31:19: [SM]   [1] Line 4, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:31:19: [SM] Exception reported: Array index out-of-bounds (index -1, limit 8)
+L 08/15/2024 - 12:31:19: [SM] Blaming: IncrementalFortress.smx
+L 08/15/2024 - 12:31:19: [SM] Call stack trace:
+L 08/15/2024 - 12:31:19: [SM]   [1] Line 4, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:31:19: [SM] Exception reported: Array index out-of-bounds (index -1, limit 8)
+L 08/15/2024 - 12:31:19: [SM] Blaming: IncrementalFortress.smx
+L 08/15/2024 - 12:31:19: [SM] Call stack trace:
+L 08/15/2024 - 12:31:19: [SM]   [1] Line 4, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:31:42: [SM] Exception reported: Array index out-of-bounds (index -1, limit 8)
+L 08/15/2024 - 12:31:42: [SM] Blaming: IncrementalFortress.smx
+L 08/15/2024 - 12:31:42: [SM] Call stack trace:
+L 08/15/2024 - 12:31:42: [SM]   [1] Line 5, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:31:42: [SM] Exception reported: Array index out-of-bounds (index -1, limit 8)
+L 08/15/2024 - 12:31:42: [SM] Blaming: IncrementalFortress.smx
+L 08/15/2024 - 12:31:42: [SM] Call stack trace:
+L 08/15/2024 - 12:31:42: [SM]   [1] Line 5, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:31:44: [SM] Exception reported: Array index out-of-bounds (index -1, limit 8)
+L 08/15/2024 - 12:31:44: [SM] Blaming: IncrementalFortress.smx
+L 08/15/2024 - 12:31:44: [SM] Call stack trace:
+L 08/15/2024 - 12:31:44: [SM]   [1] Line 5, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:31:44: [SM] Exception reported: Array index out-of-bounds (index -1, limit 8)
+L 08/15/2024 - 12:31:44: [SM] Blaming: IncrementalFortress.smx
+L 08/15/2024 - 12:31:44: [SM] Call stack trace:
+L 08/15/2024 - 12:31:44: [SM]   [1] Line 5, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 12:31:44: [SM] Exception reported: Array index out-of-bounds (index -1, limit 8)
+L 08/15/2024 - 12:31:44: [SM] Blaming: IncrementalFortress.smx
+L 08/15/2024 - 12:31:44: [SM] Call stack trace:
+L 08/15/2024 - 12:31:44: [SM]   [1] Line 5, IncrementalFortress/OnGiveNamedItem.sp::TF2Items_OnGiveNamedItem_Post
+L 08/15/2024 - 21:59:04: SourceMod error session started
+L 08/15/2024 - 21:59:04: Info (map "pl_frontier_final") (file "/home/davidn/Documents/Servers/IncrementalFortressTest/tf/addons/sourcemod/logs/errors_20240815.log")
+L 08/15/2024 - 21:59:04: [SM] Exception reported: Array index out-of-bounds (index -1, limit 60)
+L 08/15/2024 - 21:59:04: [SM] Blaming: IncrementalFortress.smx
+L 08/15/2024 - 21:59:04: [SM] Call stack trace:
+L 08/15/2024 - 21:59:04: [SM]   [1] Line 61, IncrementalFortress/Functions.sp::IsUpgradeAtMaximum
+L 08/15/2024 - 21:59:04: [SM]   [2] Line 38, IncrementalFortress/Functions.sp::PurchaseUpgrade
+L 08/15/2024 - 21:59:04: [SM]   [3] Line 36, IncrementalFortress/MenuBackend.sp::MenuHandler_UpgradeChoice

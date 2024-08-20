@@ -1,0 +1,11 @@
+L 08/19/2024 - 17:41:44: SourceMod log file session started (file "/home/davidn/Documents/Servers/IncrementalFortressTest/tf/addons/sourcemod/logs/L20240819.log") (Version "1.11.0.6968")
+L 08/19/2024 - 17:41:44: [TF2ITEMS] "GiveNamedItem" offset = 493
+L 08/19/2024 - 17:43:38: SourceMod log file session started (file "/home/davidn/Documents/Servers/IncrementalFortressTest/tf/addons/sourcemod/logs/L20240819.log") (Version "1.11.0.6968")
+L 08/19/2024 - 17:43:38: [TF2ITEMS] "GiveNamedItem" offset = 493
+L 08/19/2024 - 19:34:56: [playercommands.smx] "Divine Intellect<2><[U:1:1314738567]><>" slapped "Divine Intellect<2><[U:1:1314738567]><>" (damage "0")
+L 08/19/2024 - 19:46:19: [funcommands.smx] "Console<0><Console><Console>" froze "The Combine<3><BOT><>"
+L 08/19/2024 - 19:46:19: [funcommands.smx] "Console<0><Console><Console>" froze "Pow!<4><BOT><>"
+L 08/19/2024 - 19:46:19: [funcommands.smx] "Console<0><Console><Console>" froze "THEM<5><BOT><>"
+L 08/19/2024 - 19:48:15: [sm_sethealth.smx] "Console<0><Console><Console>" set "The Combine<3><BOT><>" health to  300000000
+L 08/19/2024 - 19:48:15: [sm_sethealth.smx] "Console<0><Console><Console>" set "Pow!<4><BOT><>" health to  300000000
+L 08/19/2024 - 19:48:15: [sm_sethealth.smx] "Console<0><Console><Console>" set "THEM<5><BOT><>" health to  300000000
