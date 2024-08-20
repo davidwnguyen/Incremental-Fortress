@@ -1,0 +1,12 @@
+*
+!.gitignore
+!configs
+!configs/if_lists.txt
+!configs/if_upgrades.txt
+!configs/if_weapons.txt
+
+!scripting
+!scripting/IncrementalFortress
+!scripting/IncrementalFortress/*
+!scripting/include
+!scripting/IncrementalFortress.sp
