@@ -169,6 +169,20 @@
 			"Attr3"		"Damage Causes Airblast"
 		}
 	}
+	"generic_melee"
+	{
+		"Melee Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus (weak)"
+			"Attr2"		"Melee Range Bonus"
+		}
+		"Utility Upgrades"
+		{
+			"Attr1"		"Slow Enemy on Hit"
+			"Attr2"		"Damages Healing Medics"
+			"Attr3"		"Damage Causes Airblast"
+		}
+	}
 	"shield"
 	{
 		"Shield Upgrades"

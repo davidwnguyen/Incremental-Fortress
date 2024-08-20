@@ -26,11 +26,22 @@
 		{
 			"attribute"		"fire rate penalty HIDDEN"
 			"name"			"Fire Rate Bonus"
-			"display"		"%.1f%%"
+			"display"		"%.0f%%"
 			"cost"			"1"
 			"increment"		"-0.1"
 			"initial_value"	"1"
 			"max"			"0.2"
+		}
+		"3.5"
+		{
+			"attribute"		"fire rate penalty HIDDEN"
+			"name"			"Fire Rate Bonus (weak)"
+			"display_name"	"Fire Rate Bonus"
+			"display"		"%.0f%%"
+			"cost"			"1"
+			"increment"		"-0.1"
+			"initial_value"	"1"
+			"max"			"0.3"
 		}
 		"4"
 		{
@@ -321,6 +332,16 @@
 			"increment"		"-0.50"
 			"initial_value"	"1"
 			"max"			"0.0"
+		}
+		"31"
+		{
+			"attribute"		"melee range multiplier"
+			"name"			"Melee Range Bonus"
+			"display"		"%.0f%%"
+			"cost"			"1"
+			"increment"		"0.75"
+			"initial_value"	"1"
+			"max"			"8.5"
 		}
 	}
 }

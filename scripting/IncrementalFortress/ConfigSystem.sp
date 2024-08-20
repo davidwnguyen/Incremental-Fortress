@@ -122,14 +122,12 @@ int LoadAttributes(Handle kv){
                 KvGetSectionName(kv, Buffer, sizeof(Buffer));
                 if (!strcmp(Buffer,"name"))
                 {
-                    KvGetString(kv, "", Buffer, sizeof(Buffer));
-                    strcopy(UpgradesArray[AttributeID].Name, sizeof(Buffer), Buffer);
-                    SetTrieValue(UpgradesListTrie, Buffer, AttributeID, true);
+                    KvGetString(kv, "", UpgradesArray[AttributeID].Name, sizeof(Buffer));
+                    SetTrieValue(UpgradesListTrie, UpgradesArray[AttributeID].Name, AttributeID, true);
                 }
                 else if (!strcmp(Buffer,"attribute"))
                 {
-                    KvGetString(kv, "", Buffer, sizeof(Buffer));
-                    strcopy(UpgradesArray[AttributeID].AttributeName, sizeof(Buffer), Buffer);
+                    KvGetString(kv, "", UpgradesArray[AttributeID].AttributeName, sizeof(Buffer));
                 }
                 else if (!strcmp(Buffer, "attr_class"))
                 {
@@ -176,6 +174,10 @@ int LoadAttributes(Handle kv){
                     else{
                         attrib.SetDescriptionFormat("value_is_additive");
                     }
+                }
+                else if(!strcmp(Buffer,"display_name"))
+                {
+                    KvGetString(kv, "", UpgradesArray[AttributeID].DisplayName, sizeof(Buffer));
                 }
                 else if (!strcmp(Buffer,"max"))
                 {

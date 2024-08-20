@@ -7,6 +7,7 @@ enum struct Upgrade{
     //It's gonna be one!
     float Cost;
     char Name[64];
+    char DisplayName[64];
     char AttributeName[64];
     char DisplayValue[64];
     char Description[256];
