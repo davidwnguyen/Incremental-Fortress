@@ -4,6 +4,7 @@
 #define MaxAttributesPerCategory 30
 #define MaxAttributesPerItem 60
 #define MaxSlots 8
+#define MaxCanteenSlots 8
 #define CategoryMaxLength 64
 #define MaxAttributes 800
 
@@ -17,11 +18,15 @@ int CurrentWeaponIDs[MAXPLAYERS][MaxSlots];
 int CurrentMenuSlot[MAXPLAYERS];
 int CurrentMenuCategory[MAXPLAYERS];
 int CurrentButtons[MAXPLAYERS];
+int CurrentCanteenSlots[MAXPLAYERS][MaxCanteenSlots];
 
 //Handles
 Handle WeaponListTrie;
 Handle UpgradesListTrie;
 Handle CategoryListTrie;
+Handle CanteenListTrie;
+Handle CanteenSnapshot;
+Handle CanteenCooldownHUD;
 AnyMap CategoryExceptionsMap;
 
 //Upgrade Lists

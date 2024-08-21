@@ -39,6 +39,12 @@ void ResetUpgradesForSlot(int client, int slot){
 		UpgradeIDsOnItem[client][slot][i] = -1;
 		UpgradeTimesOnItem[client][slot][i] = 0;
 	}
+
+	if(slot == 3){
+		for(int i = 0; i < MaxCanteenSlots; ++i){
+			CurrentCanteenSlots[client][i] = -1;
+		}
+	}
 }
 
 bool PurchaseUpgrade(int client, int slot, int SelectedUpgrade, int rate){
@@ -154,6 +160,25 @@ void UpdateItemStats(int client, int slot){
 			TF2Attrib_SetByName(ItemEntity, UpgradesArray[UpgradeIDsOnItem[client][slot][i]].AttributeName, GetUpgradeCurrentValue(client, slot, UpgradeIDsOnItem[client][slot][i]));
 		}
 	}
+
+	//NOW WE DO THE CANTEEN SLOPPA
+	if(ItemEntity == client){
+		for(int i = 0; i < MaxCanteenSlots; ++i){
+			CurrentCanteenSlots[client][i] = -1;
+		}
+
+		int canteenSize = TrieSnapshotLength(CanteenSnapshot);
+		char keyvalue[64];
+		int currentSlot = 0;
+		for(int i = 0; i < canteenSize && currentSlot < MaxCanteenSlots; ++i){
+			GetTrieSnapshotKey(CanteenSnapshot, i, keyvalue, sizeof(keyvalue));
+			int value = TF2Attrib_HookValueInt(0, keyvalue, ItemEntity);
+			if(value > 0){
+				CurrentCanteenSlots[client][currentSlot] = i;
+				currentSlot++;
+			}
+		}
+	}
 }
 
 void AwardPointsToPlayers(int amount){
@@ -191,6 +216,30 @@ int GetUpgradeRate(int client){
 		rate *= -1;
 
 	return rate;
+}
+
+void OnUseCanteenID(int client, int id){
+	if(CurrentCanteenCooldowns[client] > GetGameTime()){
+		PrintHintText(client, "Canteen is not off cooldown.");
+		return;
+	}
+
+	char AttributeBuffer[64];
+    char DisplayBuffer[64];
+	GetTrieSnapshotKey(CanteenSnapshot, id, AttributeBuffer, sizeof(AttributeBuffer));
+	GetTrieString(CanteenListTrie, AttributeBuffer, DisplayBuffer, sizeof(DisplayBuffer));
+	float value = TF2Attrib_HookValueFloat(0.0, AttributeBuffer, client);
+	float cdreduction = TF2Attrib_HookValueFloat(1.0, "canteen_recharge_rate_bonus", client);
+	if(value <= 0){
+		PrintToChat(client, "bruh what");
+		return;
+	}
+	PrintHintText(client, "Used %s LVL %.0f!", DisplayBuffer, value);
+
+	if(StrEqual(AttributeBuffer, "critical_powerup")){
+		TF2_AddCondition(client, TFCond_CritCanteen, 2.0*value);
+		CurrentCanteenCooldowns[client] = GetGameTime() + 20.0*cdreduction;
+	}
 }
 
 void SendUpgradeDescription(int client, const char[] text, float value)

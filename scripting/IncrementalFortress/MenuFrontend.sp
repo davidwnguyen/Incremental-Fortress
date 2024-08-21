@@ -8,6 +8,7 @@ void UpgradeMenuEntryPoint(int client){
     AddMenuItem(UpgradeMenu, "UpgradeSecondary", "Upgrade Secondary Slot");
     AddMenuItem(UpgradeMenu, "UpgradeMelee", "Upgrade Melee Slot");
     AddMenuItem(UpgradeMenu, "UpgradeCanteen", "Upgrade Canteen");
+    AddMenuItem(UpgradeMenu, "UseCanteen", "Use Canteen");
     AddMenuItem(UpgradeMenu, "IncreasePoints", "Give A Point");
     DisplayMenuAtItem(UpgradeMenu, client, 0, MENU_TIME_FOREVER);
 }
@@ -70,4 +71,30 @@ void UpgradeMenuShowUpgrades(int client, int category, int menupos){
     }
     
     DisplayMenuAtItem(UpgradeMenu, client, menupos, MENU_TIME_FOREVER);
+}
+
+void CanteenMenu(int client){
+    Menu UpgradeMenu = CreateMenu(MenuHandler_CanteenMenu);
+    char MenuTitle[64];
+    char Buffer[64];
+    char AttributeBuffer[64];
+    char DisplayBuffer[64];
+    Format(MenuTitle, sizeof(MenuTitle), "Incremental Fortress | Canteen Menu | $%.0f/%.0f", CurrentPoints[client], TotalPoints);
+    SetMenuTitle(UpgradeMenu, MenuTitle);
+    SetMenuExitBackButton(UpgradeMenu, true);
+
+    if(CurrentCanteenSlots[client][0] == -1){
+        PrintToChat(client, "You don't have any usable canteen consumables.");
+    }
+    for(int i = 0; i < MaxCanteenSlots; ++i){
+        if (CurrentCanteenSlots[client][i] > -1)
+        {
+            GetTrieSnapshotKey(CanteenSnapshot, CurrentCanteenSlots[client][i], AttributeBuffer, sizeof(AttributeBuffer));
+            GetTrieString(CanteenListTrie, AttributeBuffer, DisplayBuffer, sizeof(DisplayBuffer));
+            Format(Buffer, sizeof(Buffer), "Use %s", DisplayBuffer);
+            AddMenuItem(UpgradeMenu, "UseCanteen", Buffer);
+        }
+    }
+    
+    DisplayMenuAtItem(UpgradeMenu, client, 0, MENU_TIME_FOREVER);
 }

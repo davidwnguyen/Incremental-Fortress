@@ -386,22 +386,13 @@
 			"cost"			"1"
 			"increment"		"-0.15"
 			"initial_value"	"1"
-			"max"			"0.1"
-		}
-		"35"
-		{
-			"attribute"		"mult_item_meter_charge_rate"
-			"name"			"Canteen Recharge Rate Bonus"
-			"display"		"%.0f%%"
-			"cost"			"1"
-			"increment"		"-0.1"
-			"initial_value"	"1"
-			"max"			"0.5"
+			"max"			"0.4"
 		}
 		//Canteen Stuff
 		"1000"
 		{
-			"attribute"		"mult_item_meter_charge_rate"
+			"attribute"		"canteen recharge rate bonus"
+			"attr_class"	"canteen_recharge_rate_bonus"
 			"name"			"Canteen Recharge Rate Bonus"
 			"display"		"%.0f%%"
 			"cost"			"1"
@@ -411,15 +402,17 @@
 		}
 		"1100"
 		{
-			"attribute"		"critical powerup"
+			//Class and attribute needs to be the same for canteens.
+			"attribute"		"critical_powerup"
 			"attr_class"	"critical_powerup"
 			"name"			"Critical Surge"
 			"display"		"%.0f"
 			"description"	"On Activation: Gives [{VALUE}*2]s of 100% crits.\nBase cooldown is 20s."
-			"cost"			"1"
+			"cost"			"2"
 			"increment"		"1"
 			"initial_value"	"0"
-			"max"			"8"
+			"canteen"		"1"
+			"max"			"4"
 		}
 	}
 }

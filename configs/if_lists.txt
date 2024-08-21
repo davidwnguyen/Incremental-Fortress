@@ -208,6 +208,7 @@
 		"Fireball Launcher Upgrades"
 		{
 			"Attr1"		"Recharge Rate Bonus"
+			"Attr2"		"Primary Max Ammo Bonus"
 		}
 		"parent"		"base_utility"
 	}

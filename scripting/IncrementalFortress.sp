@@ -34,6 +34,7 @@ public Plugin myinfo =
 #include "IncrementalFortress/ConfigSystem.sp"
 #include "IncrementalFortress/DamageSystem.sp"
 #include "IncrementalFortress/Events.sp"
+#include "IncrementalFortress/Timers.sp"
 #include "IncrementalFortress/OnPlayerConnectDisconnect.sp"
 #include "IncrementalFortress/OnGiveNamedItem.sp"
 #include "IncrementalFortress/OnPluginStart.sp"

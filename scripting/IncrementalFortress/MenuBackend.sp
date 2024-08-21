@@ -1,12 +1,18 @@
 public MenuHandler_SlotChoice(Handle menu, MenuAction action, int client, int param){
     switch(action){
         case MenuAction_Select:{
-            if(param == 5){
-                AwardPointsToPlayers(1);
-                UpgradeMenuEntryPoint(client);
+            switch(param){
+                case 5:{
+                    CanteenMenu(client);
+                }
+                case 6:{
+                    AwardPointsToPlayers(1);
+                    UpgradeMenuEntryPoint(client);
+                }
+                default:{
+                    UpgradeMenuShowSubcategories(client, param-1);
+                }
             }
-            else
-                UpgradeMenuShowSubcategories(client, param-1);
         }
         case MenuAction_End:{
             delete menu;
@@ -45,6 +51,25 @@ public MenuHandler_UpgradeChoice(Handle menu, MenuAction action, int client, int
         case MenuAction_Cancel:{
             if(param == MenuCancel_ExitBack)
                 UpgradeMenuShowSubcategories(client, CurrentMenuSlot[client]);
+        }
+    }
+}
+
+public MenuHandler_CanteenMenu(Handle menu, MenuAction action, int client, int param){
+    switch(action){
+        case MenuAction_Select:{
+            if (CurrentCanteenSlots[client][param] > -1)
+            {
+                OnUseCanteenID(client, CurrentCanteenSlots[client][param]);
+            }
+            CanteenMenu(client);
+        }
+        case MenuAction_End:{
+            delete menu;
+        }
+        case MenuAction_Cancel:{
+            if(param == MenuCancel_ExitBack)
+                UpgradeMenuEntryPoint(client);
         }
     }
 }

@@ -12,6 +12,7 @@ void LoadConfigurationFiles(){
     WeaponListTrie = CreateTrie();
     CategoryListTrie = CreateTrie();
     UpgradesListTrie = CreateTrie();
+    CanteenListTrie = CreateTrie();
     CategoryExceptionsMap = new AnyMap();
 
     Handle kv = CreateKeyValues("if_weapons");
@@ -52,6 +53,7 @@ void LoadConfigurationFiles(){
     LoadCategoryLists(kv, -1, -1, -1, 0);
     delete kv;
 
+    CanteenSnapshot = CreateTrieSnapshot(CanteenListTrie);
 }
 
 char SubCategory[CategoryMaxLength];
@@ -117,50 +119,50 @@ int LoadAttributes(Handle kv){
             if (KvGetDataType(kv, NULL_STRING) != KvData_None)
             {
                 KvGetSectionName(kv, Buffer, sizeof(Buffer));
-                if (!strcmp(Buffer,"name"))
+                if (StrEqual(Buffer,"name"))
                 {
                     KvGetString(kv, "", UpgradesArray[AttributeID].Name, sizeof(Buffer));
                     SetTrieValue(UpgradesListTrie, UpgradesArray[AttributeID].Name, AttributeID, true);
                 }
-                else if (!strcmp(Buffer,"attribute"))
+                else if (StrEqual(Buffer,"attribute"))
                 {
                     KvGetString(kv, "", UpgradesArray[AttributeID].AttributeName, sizeof(Buffer));
                 }
-                else if (!strcmp(Buffer, "attr_class"))
+                else if (StrEqual(Buffer, "attr_class"))
                 {
                     KvGetString(kv, "", Buffer, sizeof(Buffer));
                     attrib.SetName(UpgradesArray[AttributeID].AttributeName);
                     attrib.SetClass(Buffer);
                     ShouldRegister = true;
                 }
-                else if (!strcmp(Buffer,"cost"))
+                else if (StrEqual(Buffer,"cost"))
                 {
                     KvGetString(kv, "", Buffer, sizeof(Buffer));
                     UpgradesArray[AttributeID].Cost = ParseShorthand(Buffer,sizeof(Buffer));
                 }
-                else if (!strcmp(Buffer,"overcost"))
+                else if (StrEqual(Buffer,"overcost"))
                 {
                     KvGetString(kv, "", Buffer, sizeof(Buffer));
                     UpgradesArray[AttributeID].CostIncreasePerUpgrade = StringToFloat(Buffer);
                 }
-                else if (!strcmp(Buffer,"increment"))
+                else if (StrEqual(Buffer,"increment"))
                 {
                     KvGetString(kv, "", Buffer, sizeof(Buffer));
                     UpgradesArray[AttributeID].IncrementPerUpgrade = StringToFloat(Buffer);
                 }
-                else if (!strcmp(Buffer,"initial_value"))
+                else if (StrEqual(Buffer,"initial_value"))
                 {
                     KvGetString(kv, "", Buffer, sizeof(Buffer));
                     UpgradesArray[AttributeID].InitialValue = StringToFloat(Buffer);
                 }
-                else if(!strcmp(Buffer,"description"))
+                else if(StrEqual(Buffer,"description"))
                 {
                     KvGetString(kv, "", Buffer, sizeof(Buffer));
                     ReplaceString(Buffer, sizeof(Buffer), "\\n", "\n");
                     ReplaceString(Buffer, sizeof(Buffer), "%", "％");
                     Format(UpgradesArray[AttributeID].Description, 256, "%s", Buffer);
                 }
-                else if(!strcmp(Buffer,"display"))
+                else if(StrEqual(Buffer,"display"))
                 {
                     KvGetString(kv, "", Buffer, sizeof(Buffer));
                     strcopy(UpgradesArray[AttributeID].DisplayValue, 64, Buffer);
@@ -171,11 +173,15 @@ int LoadAttributes(Handle kv){
                         attrib.SetDescriptionFormat("value_is_additive");
                     }
                 }
-                else if(!strcmp(Buffer,"display_name"))
+                else if(StrEqual(Buffer,"display_name"))
                 {
                     KvGetString(kv, "", UpgradesArray[AttributeID].DisplayName, sizeof(Buffer));
                 }
-                else if (!strcmp(Buffer,"max"))
+                else if(StrEqual(Buffer,"canteen"))
+                {
+                    SetTrieString(CanteenListTrie, UpgradesArray[AttributeID].AttributeName, UpgradesArray[AttributeID].Name);
+                }
+                else if (StrEqual(Buffer,"max"))
                 {
                     KvGetString(kv, "", Buffer, sizeof(Buffer));
                     UpgradesArray[AttributeID].MaximumValue = StringToFloat(Buffer);
@@ -207,7 +213,7 @@ void LoadCategoryLists(Handle kv, int WeaponID, int WeaponSubcatID, int WeaponAt
         }
         else if (level == 2)
         {
-            if (!strcmp(Buf, "parent"))
+            if (StrEqual(Buf, "parent"))
             {
                 int ParentID;
                 KvGetString(kv, "", Buf, 64);
@@ -246,7 +252,7 @@ void LoadCategoryLists(Handle kv, int WeaponID, int WeaponSubcatID, int WeaponAt
                 int attr_id;
                 KvGetSectionName(kv, Buf, sizeof(Buf));
 
-                if (strcmp(Buf, "parent"))
+                if (!StrEqual(Buf, "parent"))
                 {
                     KvGetString(kv, "", Buf, sizeof(Buf));
                     if (!GetTrieValue(UpgradesListTrie, Buf, attr_id))
