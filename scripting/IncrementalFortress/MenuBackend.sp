@@ -35,7 +35,7 @@ public MenuHandler_UpgradeChoice(Handle menu, MenuAction action, int client, int
                 int Attribute = UpgradeListAttributes[CurrentWeaponIDs[client][CurrentMenuSlot[client]]][CurrentMenuCategory[client]][param];
                 PurchaseUpgrade(client, CurrentMenuSlot[client], Attribute, GetUpgradeRate(client));
                 if(UpgradesArray[Attribute].Description[0])
-                    SendItemInfo(client, UpgradesArray[Attribute].Description);
+                    SendUpgradeDescription(client, UpgradesArray[Attribute].Description, GetUpgradeCurrentValue(client, CurrentMenuSlot[client], Attribute));
             }
             UpgradeMenuShowUpgrades(client, CurrentMenuCategory[client],param - (param % 7));
         }

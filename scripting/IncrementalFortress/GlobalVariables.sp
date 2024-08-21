@@ -17,7 +17,7 @@ int CurrentMenuSlot[MAXPLAYERS];
 int CurrentMenuCategory[MAXPLAYERS];
 int CurrentButtons[MAXPLAYERS];
 
-//Tries
+//Handles
 Handle WeaponListTrie;
 Handle UpgradesListTrie;
 Handle CategoryListTrie;

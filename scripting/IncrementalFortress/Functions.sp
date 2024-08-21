@@ -193,6 +193,37 @@ int GetUpgradeRate(int client){
 	return rate;
 }
 
+void SendUpgradeDescription(int client, const char[] text, float value)
+{
+	char formula[64];
+	char result[64];
+	char ValueAsString[32];
+	char textCopy[256];
+	strcopy(textCopy, sizeof(textCopy), text);
+
+	FloatToString(value, ValueAsString, sizeof(ValueAsString));
+
+	int FormulaStartLocation = FindCharInString(textCopy, '[');
+	while(FormulaStartLocation != -1){
+		strcopy(formula, FindCharInString(textCopy[FormulaStartLocation+1], ']')+1, textCopy[FormulaStartLocation+1]); 
+		strcopy(result, sizeof(result), formula);
+		ReplaceString(result, sizeof(result), "{VALUE}", ValueAsString);
+		Format(result, sizeof(result), "return %s;", result);
+		HSCRIPT script = VScript_CompileScript(result);
+		
+		VScriptExecute execute = new VScriptExecute(script);
+		execute.Execute();
+		Format(result, sizeof(result), "%.1f",execute.ReturnValue);
+		ReplaceStringEx(textCopy, 256, "[", "");
+		ReplaceStringEx(textCopy, 256, "]", "");
+		ReplaceStringEx(textCopy, 256, formula, result);
+		FormulaStartLocation = FindCharInString(textCopy, '[');
+	}
+
+	SendItemInfo(client, textCopy);
+}
+
+
 stock void SendItemInfo(int client, const char[] text)
 {
 	char itemText[256];

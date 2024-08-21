@@ -162,7 +162,7 @@ int LoadAttributes(Handle kv){
                     KvGetString(kv, "", Buffer, sizeof(Buffer));
                     ReplaceString(Buffer, sizeof(Buffer), "\\n", "\n");
                     ReplaceString(Buffer, sizeof(Buffer), "%", "％");
-                    Format(UpgradesArray[AttributeID].Description, 256, "%s:\n%s\n", UpgradesArray[AttributeID].Name, Buffer);
+                    Format(UpgradesArray[AttributeID].Description, 256, "%s", Buffer);
                 }
                 else if(!strcmp(Buffer,"display"))
                 {

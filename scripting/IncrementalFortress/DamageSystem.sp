@@ -33,7 +33,7 @@ public Action TF2_OnTakeDamageModifyRules(int victim, int &attacker, int &inflic
 			if(critNullify/(critNullify+800) >= GetRandomFloat()){
 				critType = CritType_None;
 			}else{
-				damage += damage*(critRating/critNullify);
+				damage += damage*((1+critRating/200.0)/(1+critNullify/200));
 			}
 		}
 		PrintToServer("%.2f resist, %.2f pierce", resist, pierce);

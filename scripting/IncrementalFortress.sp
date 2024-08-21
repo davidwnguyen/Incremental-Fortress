@@ -14,6 +14,7 @@
 #include <tf_econ_dynamic>
 #include <tf_ontakedamage>
 #include <takehealth_proxy>
+#include <vscript>
 
 #pragma semicolon 1
 #pragma newdecls required

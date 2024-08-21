@@ -5,5 +5,6 @@ public void OnPluginStart(){
         if(IsClientConnected(client))
             OnClientPutInServer(client);
     }
+
     PrintToServer("IF | Incremental Fortress finished loading!");
 }
