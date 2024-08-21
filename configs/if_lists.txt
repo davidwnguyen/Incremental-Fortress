@@ -69,15 +69,20 @@
 	{
 		"Canteen Upgrades"
 		{
-			"Attr1"		"Fire Rate Bonus"
+			"Attr1"		"Canteen Recharge Rate Bonus"
 		}
 		"Consumables"
 		{
-			"Attr1"		"Fire Rate Bonus"
+			"Attr1"		"Critical Surge"
 		}
-		"Powerups"
+	}
+	"base_utility"
+	{
+		"Utility Upgrades"
 		{
-			"Attr1"		"Fire Rate Bonus"
+			"Attr1"		"Slow Enemy on Hit"
+			"Attr2"		"Damages Healing Medics"
+			"Attr3"		"Damage Causes Airblast"
 		}
 	}
 	"rocket_launcher"
@@ -91,12 +96,7 @@
 			"Attr5"		"Blast Radius Increased"
 			"Attr6"		"Splash Falloff Decreased"
 		}
-		"Utility Upgrades"
-		{
-			"Attr1"		"Slow Enemy on Hit"
-			"Attr2"		"Damages Healing Medics"
-			"Attr3"		"Damage Causes Airblast"
-		}
+		"parent"		"base_utility"
 	}
 	"stickybomb_launcher"
 	{
@@ -128,12 +128,7 @@
 			"Attr5"		"Blast Radius Increased"
 			"Attr6"		"Splash Falloff Decreased"
 		}
-		"Utility Upgrades"
-		{
-			"Attr1"		"Slow Enemy on Hit"
-			"Attr2"		"Damages Healing Medics"
-			"Attr3"		"Damage Causes Airblast"
-		}
+		"parent"		"base_utility"
 	}
 	"shotgun"
 	{
@@ -145,12 +140,7 @@
 			"Attr4"		"Secondary Max Ammo Bonus"
 			"Attr4"		"Bullets Per Shot Bonus"
 		}
-		"Utility Upgrades"
-		{
-			"Attr1"		"Slow Enemy on Hit"
-			"Attr2"		"Damages Healing Medics"
-			"Attr3"		"Damage Causes Airblast"
-		}
+		"parent"		"base_utility"
 	}
 	"pistol"
 	{
@@ -162,12 +152,7 @@
 			"Attr4"		"Secondary Max Ammo Bonus"
 			"Attr4"		"Bullets Per Shot Increased"
 		}
-		"Utility Upgrades"
-		{
-			"Attr1"		"Slow Enemy on Hit"
-			"Attr2"		"Damages Healing Medics"
-			"Attr3"		"Damage Causes Airblast"
-		}
+		"parent"		"base_utility"
 	}
 	"generic_melee"
 	{
@@ -176,12 +161,7 @@
 			"Attr1"		"Fire Rate Bonus (weak)"
 			"Attr2"		"Melee Range Bonus"
 		}
-		"Utility Upgrades"
-		{
-			"Attr1"		"Slow Enemy on Hit"
-			"Attr2"		"Damages Healing Medics"
-			"Attr3"		"Damage Causes Airblast"
-		}
+		"parent"		"base_utility"
 	}
 	"flamethrower"
 	{
@@ -190,12 +170,7 @@
 			"Attr1"		"Flame Speed Bonus"
 			"Attr2"		"Primary Max Ammo Bonus"
 		}
-		"Utility Upgrades"
-		{
-			"Attr1"		"Slow Enemy on Hit"
-			"Attr2"		"Damages Healing Medics"
-			"Attr3"		"Damage Causes Airblast"
-		}
+		"parent"		"base_utility"
 	}
 	"flare_guns"
 	{
@@ -204,12 +179,7 @@
 			"Attr1"		"Fire Rate Bonus"
 			"Attr2"		"Secondary Max Ammo Bonus"
 		}
-		"Utility Upgrades"
-		{
-			"Attr1"		"Slow Enemy on Hit"
-			"Attr2"		"Damages Healing Medics"
-			"Attr3"		"Damage Causes Airblast"
-		}
+		"parent"		"base_utility"
 	}
 	"jar_base"
 	{
@@ -232,5 +202,13 @@
 		{
 			"Attr1"		"Max Health Bonus"
 		}
+	}
+	"fireball_launcher"
+	{
+		"Fireball Launcher Upgrades"
+		{
+			"Attr1"		"Recharge Rate Bonus"
+		}
+		"parent"		"base_utility"
 	}
 }

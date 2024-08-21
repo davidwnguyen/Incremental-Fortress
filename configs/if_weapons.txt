@@ -47,7 +47,7 @@
         "tf_weapon_raygun"                          "pistol"
         "tf_weapon_parachute"                       "pistol"
         "tf_weapon_flamethrower"                    "flamethrower"
-        "tf_weapon_rocketlauncher_fireball"         "pistol"
+        "tf_weapon_rocketlauncher_fireball"         "fireball_launcher"
         "tf_weapon_flaregun"                        "flare_guns"
         "tf_weapon_flaregun_revenge"                "flare_guns"
         "tf_weapon_rocketpack"                      "pistol"
@@ -78,6 +78,7 @@
         "tf_weapon_builder"                         "pistol"
         "tf_weapon_sapper"                          "pistol"
         "tf_weapon_pda_spy"                         "pistol"
+        "base_utility"                              "base_utility"
     }
     //Here are index based exceptions, ie: wearables, special weapons, etc.
     "Exceptions"

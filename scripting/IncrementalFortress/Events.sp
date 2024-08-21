@@ -3,6 +3,8 @@ public Event_InventoryRefresh(Handle event, const char[] name, bool dontBroadcas
     if(0 >= client > MaxClients)
         return;
 
+    CurrentCanteenCooldowns[client] = 0.0;
+
     if(CurrentWeaponIDs[client][4] != _:TF2_GetPlayerClass(client)){
         ResetUpgradesForSlot(client, 4);
         CurrentWeaponIDs[client][4] = _:TF2_GetPlayerClass(client);

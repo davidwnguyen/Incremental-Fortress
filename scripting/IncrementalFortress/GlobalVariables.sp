@@ -10,6 +10,7 @@
 //Per Client Variables
 float CurrentPoints[MAXPLAYERS];
 float NextMenuServing[MAXPLAYERS];
+float CurrentCanteenCooldowns[MAXPLAYERS];
 int CurrentWeaponDefinitions[MAXPLAYERS][MaxSlots];
 int CurrentWeaponEntities[MAXPLAYERS][MaxSlots];
 int CurrentWeaponIDs[MAXPLAYERS][MaxSlots];

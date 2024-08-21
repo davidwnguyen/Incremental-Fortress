@@ -215,11 +215,11 @@ void LoadCategoryLists(Handle kv, int WeaponID, int WeaponSubcatID, int WeaponAt
                     PrintToServer("Category \"%s\" [if_lists.txt] was not found (parent)", Buf)
                 }
                 else{
-                    UpgradeListSubcategoryCount[WeaponID] = UpgradeListSubcategoryCount[ParentID];
                     for(int i = 0 ;i < UpgradeListSubcategoryCount[ParentID]; ++i){
-                        UpgradeListSubcategoryNames[WeaponID][i] = UpgradeListSubcategoryNames[ParentID][i]
-                        UpgradeListAttributes[WeaponID][i] = UpgradeListAttributes[ParentID][i];
+                        UpgradeListSubcategoryNames[WeaponID][UpgradeListSubcategoryCount[WeaponID]+i] = UpgradeListSubcategoryNames[ParentID][i]
+                        UpgradeListAttributes[WeaponID][UpgradeListSubcategoryCount[WeaponID]+i] = UpgradeListAttributes[ParentID][i];
                     }
+                    UpgradeListSubcategoryCount[WeaponID] += UpgradeListSubcategoryCount[ParentID];
                     WeaponSubcatID+=UpgradeListSubcategoryCount[ParentID];
                     WeaponAttributeID = 0;
                 }

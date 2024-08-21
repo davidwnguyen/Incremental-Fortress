@@ -1,5 +1,19 @@
 "if_upgrades"
 {
+	//////////////////////////////////////////////
+	//	Available Keys:
+	//	attribute 		- Determines the attribute name to use.
+	//	attr_class 		- If filled, generates a new attribute with this class automatically.
+	//	name 			- What the attribute is referred to in configs
+	//	display_name 	- What the attribute name looks like in game
+	//	display 		- The format of the attribute. If generating a new attribute, it also determines whether if it should be additive or percentage based.
+	//	description		- Gives a key hint to the player when upgrading this attribute. [] brackets determine a formula, and using {VALUE} will fill in as a placeholder for the value of the attribute.
+	//	cost 			- The base cost of the upgrade.
+	//	overcost 		- The increase of cost per each time upgraded.
+	//	initial_value 	- The initial value of the attribute
+	//	max 			- This finalizes the attribute and determines the cap of the upgrade (going both negative and positive)
+	//////////////////////////////////////////////
+
 	"upgrades"
 	{
 		"1"
@@ -30,7 +44,7 @@
 			"cost"			"1"
 			"increment"		"-0.1"
 			"initial_value"	"1"
-			"max"			"0.2"
+			"max"			"0.3"
 		}
 		"3.5"
 		{
@@ -41,7 +55,7 @@
 			"cost"			"1"
 			"increment"		"-0.1"
 			"initial_value"	"1"
-			"max"			"0.3"
+			"max"			"0.4"
 		}
 		"4"
 		{
@@ -106,9 +120,9 @@
 			"name"			"Physical Resistance"
 			"display"		"%.0f%%"
 			"cost"			"1"
-			"increment"		"-0.05"
+			"increment"		"-0.1"
 			"initial_value"	"1"
-			"max"			"0.1"
+			"max"			"0.2"
 		}
 		"10"
 		{
@@ -117,9 +131,9 @@
 			"name"			"Fire Resistance"
 			"display"		"%.0f%%"
 			"cost"			"1"
-			"increment"		"-0.05"
+			"increment"		"-0.1"
 			"initial_value"	"1"
-			"max"			"0.1"
+			"max"			"0.2"
 		}
 		"11"
 		{
@@ -128,9 +142,9 @@
 			"name"			"Blast Resistance"
 			"display"		"%.0f%%"
 			"cost"			"1"
-			"increment"		"-0.05"
+			"increment"		"-0.1"
 			"initial_value"	"1"
-			"max"			"0.1"
+			"max"			"0.2"
 		}
 		"12"
 		{
@@ -139,9 +153,9 @@
 			"name"			"Electric Resistance"
 			"display"		"%.0f%%"
 			"cost"			"1"
-			"increment"		"-0.05"
+			"increment"		"-0.1"
 			"initial_value"	"1"
-			"max"			"0.1"
+			"max"			"0.2"
 		}
 		"13"
 		{
@@ -363,6 +377,49 @@
 			"increment"		"500"
 			"initial_value"	"0"
 			"max"			"10000.0"
-		}	
+		}
+		"34"
+		{
+			"attribute"		"mult_item_meter_charge_rate"
+			"name"			"Recharge Rate Bonus"
+			"display"		"%.0f%%"
+			"cost"			"1"
+			"increment"		"-0.15"
+			"initial_value"	"1"
+			"max"			"0.1"
+		}
+		"35"
+		{
+			"attribute"		"mult_item_meter_charge_rate"
+			"name"			"Canteen Recharge Rate Bonus"
+			"display"		"%.0f%%"
+			"cost"			"1"
+			"increment"		"-0.1"
+			"initial_value"	"1"
+			"max"			"0.5"
+		}
+		//Canteen Stuff
+		"1000"
+		{
+			"attribute"		"mult_item_meter_charge_rate"
+			"name"			"Canteen Recharge Rate Bonus"
+			"display"		"%.0f%%"
+			"cost"			"1"
+			"increment"		"-0.1"
+			"initial_value"	"1"
+			"max"			"0.5"
+		}
+		"1100"
+		{
+			"attribute"		"critical powerup"
+			"attr_class"	"critical_powerup"
+			"name"			"Critical Surge"
+			"display"		"%.0f"
+			"description"	"On Activation: Gives [{VALUE}*2]s of 100% crits.\nBase cooldown is 20s."
+			"cost"			"1"
+			"increment"		"1"
+			"initial_value"	"0"
+			"max"			"8"
+		}
 	}
 }
