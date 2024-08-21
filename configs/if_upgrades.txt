@@ -343,5 +343,26 @@
 			"initial_value"	"1"
 			"max"			"8.5"
 		}
+		"32"
+		{
+			"attribute"		"effect bar recharge rate increased"
+			"name"			"Effect Bar Recharge Bonus"
+			"display"		"%.1f%%"
+			"cost"			"1"
+			"increment"		"-0.2"
+			"initial_value"	"1"
+			"max"			"0.001"
+		}
+		"33"
+		{
+			"attribute"		"flame speed bonus"
+			"attr_class"	"flame_speed"
+			"name"			"Flame Speed Bonus"
+			"display"		"%.0f"
+			"cost"			"1"
+			"increment"		"500"
+			"initial_value"	"0"
+			"max"			"10000.0"
+		}	
 	}
 }

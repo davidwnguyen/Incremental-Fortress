@@ -187,14 +187,43 @@
 	{
 		"Flamethrower Upgrades"
 		{
-			"Attr1"		"Fire Rate Bonus (weak)"
-			"Attr2"		"Melee Range Bonus"
+			"Attr1"		"Flame Speed Bonus"
+			"Attr2"		"Primary Max Ammo Bonus"
 		}
 		"Utility Upgrades"
 		{
 			"Attr1"		"Slow Enemy on Hit"
 			"Attr2"		"Damages Healing Medics"
 			"Attr3"		"Damage Causes Airblast"
+		}
+	}
+	"flare_guns"
+	{
+		"Flare Gun Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus"
+			"Attr2"		"Secondary Max Ammo Bonus"
+		}
+		"Utility Upgrades"
+		{
+			"Attr1"		"Slow Enemy on Hit"
+			"Attr2"		"Damages Healing Medics"
+			"Attr3"		"Damage Causes Airblast"
+		}
+	}
+	"jar_base"
+	{
+		"Jar Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus (weak)"
+			"Attr2"		"Effect Bar Recharge Bonus"
+		}
+	}
+	"lunchbox_base"
+	{
+		"Lunchbox Upgrades"
+		{
+			"Attr1"		"Effect Bar Recharge Bonus"
 		}
 	}
 	"shield"
