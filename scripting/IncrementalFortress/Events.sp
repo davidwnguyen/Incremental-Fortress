@@ -61,7 +61,7 @@ public Action TF2_CalcIsAttackCritical(int client, int weapon, char[] weaponname
             result = true;
         }
     }
-    return Plugin_Changed;
+    return Plugin_Handled;
 }
 
 public Action TF2_OnTakeHealthPre(int client, float &flAmount, int &flags){

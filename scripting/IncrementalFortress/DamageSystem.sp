@@ -25,7 +25,6 @@ public Action TF2_OnTakeDamageModifyRules(int victim, int &attacker, int &inflic
 
 		if(critType == CritType_Crit){
 			//Reduce crits to only double damage.
-			PrintToServer("yeah?");
 			damage /= 3.0;
 
 			float critNullify = TF2Attrib_HookValueFloat(0.0, "critical_nullify_rating", victim);
@@ -36,7 +35,6 @@ public Action TF2_OnTakeDamageModifyRules(int victim, int &attacker, int &inflic
 				damage += damage*((1+critRating/200.0)/(1+critNullify/200));
 			}
 		}
-		PrintToServer("%.2f resist, %.2f pierce", resist, pierce);
 		damage *= resist + pierce;
 	}
 	return Plugin_Changed;

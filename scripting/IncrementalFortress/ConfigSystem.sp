@@ -82,10 +82,7 @@ int LoadUpgradeCategories(Handle kv, int level = 1){
                         KvGetString(kv, "", Buffer, sizeof(Buffer));
                     }
 
-                    PrintToServer("%i value | %i cat", GetValue, CategoryID);
-
                     if (SetTrieValue(WeaponListTrie, WeaponCategoryName[CategoryID], GetValue, false)){
-                        PrintToServer("IF | Loaded category %s for %s | Cat = %i", Buffer, WeaponCategoryName[CategoryID], GetValue);
                         SetTrieValue(CategoryListTrie, Buffer, GetValue, false)
                     }else{
                         PrintToServer("IF | Something went wrong trying to load the category of %s", Buffer);
@@ -134,7 +131,6 @@ int LoadAttributes(Handle kv){
                     KvGetString(kv, "", Buffer, sizeof(Buffer));
                     attrib.SetName(UpgradesArray[AttributeID].AttributeName);
                     attrib.SetClass(Buffer);
-                    PrintToServer("IF | Registering attribute \"%s\" with class \"%s\"", UpgradesArray[AttributeID].AttributeName, Buffer);
                     ShouldRegister = true;
                 }
                 else if (!strcmp(Buffer,"cost"))
