@@ -384,7 +384,7 @@
 			"name"			"Recharge Rate Bonus"
 			"display"		"%.0f%%"
 			"cost"			"1"
-			"increment"		"-0.15"
+			"increment"		"-0.1"
 			"initial_value"	"1"
 			"max"			"0.4"
 		}
