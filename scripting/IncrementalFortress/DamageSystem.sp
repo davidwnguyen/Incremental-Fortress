@@ -1,12 +1,21 @@
 public Action TF2_OnTakeDamage(int victim, int &attacker, int &inflictor, float &damage, int &damagetype, int &weapon, float damageForce[3], float damagePosition[3], int damagecustom, CritType &critType) {
-	return Plugin_Continue;
+	damagetype |= DMG_SLASH;
+	return Plugin_Changed;
 }
 public Action TF2_OnTakeDamageModifyRules(int victim, int &attacker, int &inflictor, float &damage, int &damagetype, int &weapon, float damageForce[3], float damagePosition[3], int damagecustom, CritType &critType){
-	float resist, pierce;
+	float resist = 1.0, pierce = 0.0;
 	if(0 < victim <= MaxClients){
 		if(0 < attacker <= MaxClients){
 			pierce = TF2Attrib_HookValueFloat(0.0, "resistance_piercing", attacker);
+			PrintToServer("Base pierce = %.2f", pierce);
 			damage *= GetDamagePointScaling();
+		}
+
+		if(TF2_IsPlayerInCondition(victim, TFCond_DefenseBuffed)){
+			resist = 0.65;
+			ConsumePierce(resist, pierce);
+			PrintToChat(victim, "Post battalion's stats: %.2f pierce, %.2fx dmg taken", pierce, resist);
+			damage *= resist;
 		}
 
 		if(damagetype & DMG_SHOCK){
@@ -18,6 +27,9 @@ public Action TF2_OnTakeDamageModifyRules(int victim, int &attacker, int &inflic
 		}else{
 			resist = TF2Attrib_HookValueFloat(1.0, "physical_resistance", victim);
 		}
+		ConsumePierce(resist, pierce);
+		PrintToChat(victim, "Final stats: %.2f pierce, %.2fx dmg taken", pierce, resist);
+		damage *= resist;
 
 		if(damagetype & DMG_FALL){
 			damage *= TF2Attrib_HookValueFloat(1.0, "fall_damage_reduction", victim);
@@ -35,7 +47,7 @@ public Action TF2_OnTakeDamageModifyRules(int victim, int &attacker, int &inflic
 				damage += damage*((1+critRating/200.0)/(1+critNullify/200));
 			}
 		}
-		damage *= resist + pierce;
+		PrintToChat(victim, "Final Damage: %.2f", damage);
 	}
 	return Plugin_Changed;
 }

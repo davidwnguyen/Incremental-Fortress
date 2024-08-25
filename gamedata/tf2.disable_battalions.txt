@@ -1,0 +1,26 @@
+"Games"
+{
+	"tf"
+	{
+		"Signatures"
+		{
+			"CTFGameRules::ApplyOnDamageModifyRules"
+			{
+				"linux"		"@_ZN12CTFGameRules24ApplyOnDamageModifyRulesER15CTakeDamageInfoP11CBaseEntityb"
+			}
+		}
+		"MemPatches"
+		{
+			"CTFGameRules::ApplyOnDamageModifyRules::DisableBattalions"
+			{
+				"signature"	"CTFGameRules::ApplyOnDamageModifyRules"
+				"linux"
+				{
+					"offset"	"6F8h"
+					"verify"	"\x83\xE1\x01"
+					"patch"		"\x83\xE1\x04"
+				}
+			}
+		}
+	}
+}

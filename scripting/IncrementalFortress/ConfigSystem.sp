@@ -267,3 +267,13 @@ void LoadCategoryLists(Handle kv, int WeaponID, int WeaponSubcatID, int WeaponAt
     }
     while (KvGotoNextKey(kv, false));
 }
+
+void LoadGameData(){
+    /*Handle gamedata = LoadGameConfigFile("tf2.incrementalfortress");
+    Handle InCondHook = DHookCreateFromConf(gamedata, "CTFPlayerShared::InCond()");
+    if(InCondHook)
+        DHookEnableDetour(InCondHook, true, OnInCondHook);
+    else
+        PrintToServer("What is bro on about");
+    */
+}

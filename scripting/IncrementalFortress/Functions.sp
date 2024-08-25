@@ -272,6 +272,15 @@ void SendUpgradeDescription(int client, const char[] text, float value)
 	SendItemInfo(client, textCopy);
 }
 
+void ConsumePierce(float& resist, float& pierce){
+	if(pierce > 1-resist){
+		pierce -= 1-resist;
+		resist = 1.0;
+	}else{
+		resist += pierce;
+		pierce = 0.0;
+	}
+}
 
 stock void SendItemInfo(int client, const char[] text)
 {

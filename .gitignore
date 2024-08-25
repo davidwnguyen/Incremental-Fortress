@@ -4,9 +4,14 @@
 !configs/if_lists.txt
 !configs/if_upgrades.txt
 !configs/if_weapons.txt
+!configs/sourcescramble
+!configs/sourcescramble/tf2.disable_battalions.cfg
 
 !scripting
 !scripting/IncrementalFortress
 !scripting/IncrementalFortress/*
 !scripting/include
 !scripting/IncrementalFortress.sp
+
+!gamedata
+!gamedata/tf2.disable_battalions.txt

@@ -72,3 +72,11 @@ public Action TF2_OnTakeHealthPre(int client, float &flAmount, int &flags){
     }
     return Plugin_Changed;
 }
+
+public void TF2_OnConditionRemoved(int client, TFCond condition){
+    switch(condition){
+        case TFCond_DefenseBuffed:{
+            PrintToServer("test?");
+        }
+    }
+}

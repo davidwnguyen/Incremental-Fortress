@@ -74,6 +74,8 @@
 		"Consumables"
 		{
 			"Attr1"		"Critical Surge"
+			"Attr2"		"Brace"
+			"Attr3"		"Shadow Trickster"
 		}
 	}
 	"base_utility"

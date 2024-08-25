@@ -106,12 +106,12 @@
 			"attribute"		"resistance piercing"
 			"attr_class"	"resistance_piercing"
 			"name"			"Resistance Piercing"
-			"display"		"%.1f%%"
+			"display"		"%.2f"
 			"description"	"Subtracts damage reductions.\nOrder is conditions -> wearables -> body"
 			"cost"			"2"
-			"increment"		"0.075"
+			"increment"		"0.05"
 			"initial_value"	"0"
-			"max"			"0.525"
+			"max"			"0.5"
 		}
 		"9"
 		{
@@ -395,10 +395,10 @@
 			"attr_class"	"canteen_recharge_rate_bonus"
 			"name"			"Canteen Recharge Rate Bonus"
 			"display"		"%.0f%%"
-			"cost"			"1"
-			"increment"		"-0.1"
+			"cost"			"4"
+			"increment"		"-0.25"
 			"initial_value"	"1"
-			"max"			"0.5"
+			"max"			"0.75"
 		}
 		"1100"
 		{
@@ -407,12 +407,38 @@
 			"attr_class"	"critical_powerup"
 			"name"			"Critical Surge"
 			"display"		"%.0f"
-			"description"	"On Activation: Gives [{VALUE}*2]s of 100% crits.\nBase cooldown is 20s."
+			"description"	"On Activation:\nGives [{VALUE}*2]s of 100% crits.\nBase cooldown is 20s."
 			"cost"			"2"
 			"increment"		"1"
 			"initial_value"	"0"
 			"canteen"		"1"
 			"max"			"4"
+		}
+		"1101"
+		{
+			"attribute"		"brace_powerup"
+			"attr_class"	"brace_powerup"
+			"name"			"Brace"
+			"display"		"%.0f"
+			"description"	"On Activation:\nGives 20s of -35% damage taken.\nBase cooldown is 20s."
+			"cost"			"6"
+			"increment"		"1"
+			"initial_value"	"0"
+			"canteen"		"1"
+			"max"			"1"
+		}
+		"1102"
+		{
+			"attribute"		"trickster_powerup"
+			"attr_class"	"trickster_powerup"
+			"name"			"Shadow Trickster"
+			"display"		"%.0f"
+			"description"	"On Activation:\nFor 20s, steal 1 ammo per shot. Up to 10/s.\n-75% critical block rating.\nBase cooldown is 20s."
+			"cost"			"6"
+			"increment"		"1"
+			"initial_value"	"0"
+			"canteen"		"1"
+			"max"			"1"
 		}
 	}
 }
