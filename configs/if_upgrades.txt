@@ -89,6 +89,17 @@
 			"initial_value"	"0"
 			"max"			"1000"
 		}
+		"6.5"//Dev attribute for conditions?
+		{
+			"attribute"		"critical nullify rating mult"
+			"attr_class"	"critical_nullify_rating"
+			"name"			"Critical Nullify Rating Multiplier"
+			"display"		"%.0f%%"
+			"cost"			"0"
+			"increment"		"0"
+			"initial_value"	"1"
+			"max"			"0"
+		}
 		"7"
 		{
 			"attribute"		"critical rating"
@@ -248,7 +259,7 @@
 			"name"			"Primary Max Ammo Bonus"
 			"display"		"%.0f%%"
 			"cost"			"1"
-			"increment"		"0.25"
+			"increment"		"0.5"
 			"initial_value"	"1"
 			"max"			"10"
 		}
@@ -258,7 +269,7 @@
 			"name"			"Secondary Max Ammo Bonus"
 			"display"		"%.0f%%"
 			"cost"			"1"
-			"increment"		"0.25"
+			"increment"		"0.5"
 			"initial_value"	"1"
 			"max"			"10"
 		}
@@ -388,6 +399,17 @@
 			"initial_value"	"1"
 			"max"			"0.4"
 		}
+		"35"
+		{
+			"attribute"		"ammo regen"
+			"name"			"Ammo Regeneration"
+			"display"		"%.1f%%"
+			"description"	"Regenerates [{VALUE}*100]% of your ammo every 5s."
+			"cost"			"1"
+			"increment"		"0.025"
+			"initial_value"	"0"
+			"max"			"0.25"
+		}
 		//Canteen Stuff
 		"1000"
 		{
@@ -431,9 +453,9 @@
 		{
 			"attribute"		"trickster_powerup"
 			"attr_class"	"trickster_powerup"
-			"name"			"Shadow Trickster"
+			"name"			"Morph Trickster"
 			"display"		"%.0f"
-			"description"	"On Activation:\nFor 20s, steal 1 ammo per shot. Up to 10/s.\n-75% critical block rating.\nBase cooldown is 20s."
+			"description"	"On Activation:\nFor 20s, steal 1 ammo per shot. Up to 10/s.\n-75% critical nullify rating.\nBase cooldown is 20s."
 			"cost"			"6"
 			"increment"		"1"
 			"initial_value"	"0"

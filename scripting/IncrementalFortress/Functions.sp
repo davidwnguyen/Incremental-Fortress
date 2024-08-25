@@ -20,8 +20,6 @@ int SearchArray(int[] input, int size, int search){
 }
 
 void ResetUpgradesForSlot(int client, int slot){
-	CancelClientMenu(client);
-
 	int ItemEntity = TF2Util_GetPlayerLoadoutEntity(client, slot);
 	if(slot == 4 || slot == 3)
 		ItemEntity = client;
@@ -192,13 +190,13 @@ void AwardPointsToPlayers(int amount){
 }
 
 float GetHealthPointScaling(){
-	return Pow(1.075, TotalPoints) + 0.1*TotalPoints;
+	return Pow(1.06, TotalPoints) * 1+(0.15*TotalPoints);
 }
 float GetDamagePointScaling(){
-	return Pow(1.05, TotalPoints) + 0.05*TotalPoints;
+	return Pow(1.06, TotalPoints) * 1+(0.05*TotalPoints);
 }
 float GetHealingPointScaling(){
-	return Pow(1.035, TotalPoints) + 0.04*TotalPoints;
+	return Pow(1.06, TotalPoints) * 1+(0.03*TotalPoints);
 }
 
 int GetPositionOfAttribute(int client, int slot, int SelectedUpgrade, bool ShouldSeek = true){
@@ -231,15 +229,11 @@ void OnUseCanteenID(int client, int id){
 	float value = TF2Attrib_HookValueFloat(0.0, AttributeBuffer, client);
 	float cdreduction = TF2Attrib_HookValueFloat(1.0, "canteen_recharge_rate_bonus", client);
 	if(value <= 0){
-		PrintToChat(client, "bruh what");
+		PrintToServer("bruh what");
 		return;
 	}
 	PrintHintText(client, "Used %s LVL %.0f!", DisplayBuffer, value);
-
-	if(StrEqual(AttributeBuffer, "critical_powerup")){
-		TF2_AddCondition(client, TFCond_CritCanteen, 2.0*value);
-		CurrentCanteenCooldowns[client] = GetGameTime() + 20.0*cdreduction;
-	}
+	OnCanteenUsed(AttributeBuffer, client, value, cdreduction);
 }
 
 void SendUpgradeDescription(int client, const char[] text, float value)

@@ -79,6 +79,7 @@
         "tf_weapon_sapper"                          "pistol"
         "tf_weapon_pda_spy"                         "pistol"
         "base_utility"                              "base_utility"
+        "ammo_base"                                 "ammo_base"
     }
     //Here are index based exceptions, ie: wearables, special weapons, etc.
     "Exceptions"

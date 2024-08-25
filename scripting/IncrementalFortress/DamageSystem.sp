@@ -7,14 +7,16 @@ public Action TF2_OnTakeDamageModifyRules(int victim, int &attacker, int &inflic
 	if(0 < victim <= MaxClients){
 		if(0 < attacker <= MaxClients){
 			pierce = TF2Attrib_HookValueFloat(0.0, "resistance_piercing", attacker);
-			PrintToServer("Base pierce = %.2f", pierce);
 			damage *= GetDamagePointScaling();
 		}
+
+		//Vaccinator trash
+		VaccinatorDamageReductions(victim, damagetype, resist, pierce);
+		damage *= resist;
 
 		if(TF2_IsPlayerInCondition(victim, TFCond_DefenseBuffed)){
 			resist = 0.65;
 			ConsumePierce(resist, pierce);
-			PrintToChat(victim, "Post battalion's stats: %.2f pierce, %.2fx dmg taken", pierce, resist);
 			damage *= resist;
 		}
 
@@ -28,7 +30,6 @@ public Action TF2_OnTakeDamageModifyRules(int victim, int &attacker, int &inflic
 			resist = TF2Attrib_HookValueFloat(1.0, "physical_resistance", victim);
 		}
 		ConsumePierce(resist, pierce);
-		PrintToChat(victim, "Final stats: %.2f pierce, %.2fx dmg taken", pierce, resist);
 		damage *= resist;
 
 		if(damagetype & DMG_FALL){
@@ -50,4 +51,38 @@ public Action TF2_OnTakeDamageModifyRules(int victim, int &attacker, int &inflic
 		PrintToChat(victim, "Final Damage: %.2f", damage);
 	}
 	return Plugin_Changed;
+}
+
+void VaccinatorDamageReductions(int victim, int damagetype, float &resist, float &pierce){
+	resist = 1.0;
+	if(damagetype & DMG_BLAST){
+		if(TF2_IsPlayerInCondition(victim, TFCond_UberBlastResist)){
+			resist = 0.33;
+			ConsumePierce(resist, pierce);
+		}
+		else if(TF2_IsPlayerInCondition(victim, TFCond_SmallBlastResist)){
+			resist = 0.75;
+			ConsumePierce(resist, pierce);
+		}
+	}
+	else if(damagetype & DMG_BURN | DMG_IGNITE){
+		if(TF2_IsPlayerInCondition(victim, TFCond_UberFireResist)){
+			resist = 0.33;
+			ConsumePierce(resist, pierce);
+		}
+		else if(TF2_IsPlayerInCondition(victim, TFCond_SmallFireResist)){
+			resist = 0.75;
+			ConsumePierce(resist, pierce);
+		}
+	}
+	else if(damagetype & DMG_BULLET){
+		if(TF2_IsPlayerInCondition(victim, TFCond_UberBulletResist)){
+			resist = 0.33;
+			ConsumePierce(resist, pierce);
+		}
+		else if(TF2_IsPlayerInCondition(victim, TFCond_SmallBulletResist)){
+			resist = 0.75;
+			ConsumePierce(resist, pierce);
+		}
+	}
 }

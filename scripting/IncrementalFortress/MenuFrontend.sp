@@ -23,7 +23,6 @@ void UpgradeMenuShowSubcategories(int client, int slot){
         slot = 4;
 
     CurrentMenuSlot[client] = slot;
-    PrintToServer("%i", CurrentWeaponIDs[client][slot]);
     if (CurrentWeaponIDs[client][slot] > 0)
     {
         char Buffer[128]

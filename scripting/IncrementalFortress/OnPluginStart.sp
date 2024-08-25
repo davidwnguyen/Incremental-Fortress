@@ -1,8 +1,6 @@
 public void OnPluginStart(){
     LoadConfigurationFiles();
 
-    LoadGameData();
-
     CanteenCooldownHUD = CreateHudSynchronizer();
     
     HookEvent("post_inventory_application", Event_InventoryRefresh);

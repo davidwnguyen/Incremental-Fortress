@@ -1,7 +1,16 @@
 public Event_InventoryRefresh(Handle event, const char[] name, bool dontBroadcast){
     int client = GetClientOfUserId(GetEventInt(event, "userid"));
     if(0 >= client > MaxClients)
-        return;
+        CancelClientMenu(client);
+
+    CreateTimer(0.2, DelayedInventoryCheck, GetEventInt(event, "userid"));
+}
+
+public Action DelayedInventoryCheck(Handle timer, int ref){
+    int client = GetClientOfUserId(ref);
+
+    if(0 >= client > MaxClients)
+        return Plugin_Stop;
 
     CurrentCanteenCooldowns[client] = 0.0;
 
@@ -11,7 +20,10 @@ public Event_InventoryRefresh(Handle event, const char[] name, bool dontBroadcas
 
         ResetUpgradesForSlot(client, 3);
         GetTrieValue(CategoryListTrie, "canteen", CurrentWeaponIDs[client][3]);
+
+        TF2Attrib_SetByName(client, "dmg pierces resists absorbs", 1.0);
     }
+
     for(int i = 0;i < 3;++i){
         int WeaponID = TF2Util_GetPlayerLoadoutEntity(client, i);
         int DefinitionID;
@@ -27,7 +39,7 @@ public Event_InventoryRefresh(Handle event, const char[] name, bool dontBroadcas
         if(IsValidEntity(WeaponID)){
             DefinitionID = GetEntProp(WeaponID, Prop_Send, "m_iItemDefinitionIndex");
         }else{
-            return;
+            continue;
         }
 
         if(CurrentWeaponDefinitions[client][i] != DefinitionID){
@@ -46,6 +58,8 @@ public Event_InventoryRefresh(Handle event, const char[] name, bool dontBroadcas
             GetTrieValue(CategoryListTrie, WeaponClassname, CurrentWeaponIDs[client][i]);
         }
     }
+
+    return Plugin_Continue;
 }
 
 public Action OnGetMaxHealth(int client, int &maxhealth){
@@ -73,10 +87,15 @@ public Action TF2_OnTakeHealthPre(int client, float &flAmount, int &flags){
     return Plugin_Changed;
 }
 
-public void TF2_OnConditionRemoved(int client, TFCond condition){
-    switch(condition){
-        case TFCond_DefenseBuffed:{
-            PrintToServer("test?");
-        }
-    }
+void OnCanteenUsed(const char[] name, int client, float value, float cdreduction){
+	if(StrEqual(name, "critical_powerup")){
+		TF2_AddCondition(client, TFCond_CritCanteen, 2.0*value);
+		CurrentCanteenCooldowns[client] = GetGameTime() + 20.0*cdreduction;
+	}else if(StrEqual(name, "brace_powerup")){
+		TF2_AddCondition(client, TFCond_DefenseBuffed, 20.0);
+		CurrentCanteenCooldowns[client] = GetGameTime() + 20.0*cdreduction;
+	}else if(StrEqual(name, "trickster_powerup")){
+		CurrentCanteenCooldowns[client] = GetGameTime() + 20.0*cdreduction;
+        TF2Attrib_AddCustomPlayerAttribute(client, "critical nullify rating mult", 0.25, 20.0);
+	}
 }

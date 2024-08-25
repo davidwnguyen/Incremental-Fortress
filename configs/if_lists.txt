@@ -29,41 +29,72 @@
 			"Attr6"		"Fall Damage Reduction"
 		}
 	}
+	"ammo_base"
+	{
+		"Ammo Upgrades"
+		{
+			"Attr1"		"Primary Max Ammo Bonus"
+			"Attr2"		"Secondary Max Ammo Bonus"
+			"Attr3"		"Ammo Regeneration"
+		}
+	}
 	"body_scout"
 	{
 		"parent"		"body_base"
+		"parent"		"ammo_base"
 	}
 	"body_sniper"
 	{
 		"parent"		"body_base"
+		"parent"		"ammo_base"
 	}
 	"body_soldier"
 	{
 		"parent"		"body_base"
+		"parent"		"ammo_base"
 	}
 	"body_demoman"
 	{
 		"parent"		"body_base"
+		"parent"		"ammo_base"
 	}
 	"body_medic"
 	{
 		"parent"		"body_base"
+		"Ammo Upgrades"
+		{
+			"Attr1"		"Primary Max Ammo Bonus"
+			"Attr2"		"Ammo Regeneration"
+		}
 	}
 	"body_heavy"
 	{
 		"parent"		"body_base"
+		"parent"		"ammo_base"
 	}
 	"body_pyro"
 	{
 		"parent"		"body_base"
+		"parent"		"ammo_base"
 	}
 	"body_spy"
 	{
 		"parent"		"body_base"
+		"Ammo Upgrades"
+		{
+			"Attr1"		"Primary Max Ammo Bonus"
+			"Attr2"		"Ammo Regeneration"
+		}
 	}
 	"body_engie"
 	{
 		"parent"		"body_base"
+		"Ammo Upgrades"
+		{
+			"Attr1"		"Primary Max Ammo Bonus"
+			"Attr2"		"Secondary Max Ammo Bonus"
+			"Attr3"		"Ammo Regeneration"
+		}
 	}
 	"canteen"
 	{
@@ -75,7 +106,7 @@
 		{
 			"Attr1"		"Critical Surge"
 			"Attr2"		"Brace"
-			"Attr3"		"Shadow Trickster"
+			"Attr3"		"Morph Trickster"
 		}
 	}
 	"base_utility"
@@ -94,7 +125,6 @@
 			"Attr1"		"Fire Rate Bonus"
 			"Attr2"		"Reload Rate Bonus"
 			"Attr3"		"Clip Size Bonus"
-			"Attr4"		"Primary Max Ammo Bonus"
 			"Attr5"		"Blast Radius Increased"
 			"Attr6"		"Splash Falloff Decreased"
 		}
@@ -107,7 +137,6 @@
 			"Attr1"		"Fire Rate Bonus"
 			"Attr2"		"Reload Rate Bonus"
 			"Attr3"		"Clip Size Bonus"
-			"Attr4"		"Secondary Max Ammo Bonus"
 			"Attr5"		"Blast Radius Increased"
 			"Attr6"		"Splash Falloff Decreased"
 		}
@@ -126,7 +155,6 @@
 			"Attr1"		"Fire Rate Bonus"
 			"Attr2"		"Reload Rate Bonus"
 			"Attr3"		"Clip Size Bonus"
-			"Attr4"		"Primary Max Ammo Bonus"
 			"Attr5"		"Blast Radius Increased"
 			"Attr6"		"Splash Falloff Decreased"
 		}
@@ -139,7 +167,6 @@
 			"Attr1"		"Fire Rate Bonus"
 			"Attr2"		"Reload Rate Bonus"
 			"Attr3"		"Clip Size Bonus"
-			"Attr4"		"Secondary Max Ammo Bonus"
 			"Attr4"		"Bullets Per Shot Bonus"
 		}
 		"parent"		"base_utility"
@@ -151,7 +178,6 @@
 			"Attr1"		"Fire Rate Bonus"
 			"Attr2"		"Reload Rate Bonus"
 			"Attr3"		"Clip Size Bonus"
-			"Attr4"		"Secondary Max Ammo Bonus"
 			"Attr4"		"Bullets Per Shot Increased"
 		}
 		"parent"		"base_utility"
@@ -170,7 +196,6 @@
 		"Flamethrower Upgrades"
 		{
 			"Attr1"		"Flame Speed Bonus"
-			"Attr2"		"Primary Max Ammo Bonus"
 		}
 		"parent"		"base_utility"
 	}
@@ -179,7 +204,6 @@
 		"Flare Gun Upgrades"
 		{
 			"Attr1"		"Fire Rate Bonus"
-			"Attr2"		"Secondary Max Ammo Bonus"
 		}
 		"parent"		"base_utility"
 	}
@@ -210,7 +234,6 @@
 		"Fireball Launcher Upgrades"
 		{
 			"Attr1"		"Recharge Rate Bonus"
-			"Attr2"		"Primary Max Ammo Bonus"
 		}
 		"parent"		"base_utility"
 	}
