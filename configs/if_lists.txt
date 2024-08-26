@@ -237,4 +237,57 @@
 		}
 		"parent"		"base_utility"
 	}
+	"cleaver"
+	{
+		"Cleaver Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus (weak)"
+			"Attr2"		"Effect Bar Recharge Bonus"
+		}
+		"parent"		"base_utility"
+	}
+	"base_buff_item"
+	{
+		"Buff Item Upgrades"
+		{
+			"Attr1"		"Buff Duration Bonus"
+		}
+	}
+	"raygun"
+	{
+		"Raygun Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus"
+			"Attr2"		"Reload Rate Bonus"
+			"Attr3"		"Clip Size Bonus"
+		}
+		"parent"		"base_utility"
+	}
+	"sniper_rifle"
+	{
+		"Sniper Rifle Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus"
+			"Attr2"		"Bullets Per Shot Increased"
+		}
+		"parent"		"base_utility"
+	}
+	"minigun"
+	{
+		"Minigun Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus"
+			"Attr2"		"Bullets Per Shot Bonus"
+		}
+		"parent"		"base_utility"
+	}
+	"minigun"
+	{
+		"Minigun Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus"
+			"Attr2"		"Bullets Per Shot Bonus"
+		}
+		"parent"		"base_utility"
+	}
 }

@@ -3,7 +3,8 @@ public Event_InventoryRefresh(Handle event, const char[] name, bool dontBroadcas
     if(0 >= client > MaxClients)
         CancelClientMenu(client);
 
-    CreateTimer(0.2, DelayedInventoryCheck, GetEventInt(event, "userid"));
+    //Add a little delay to hopefully add support for custom weapons?
+    CreateTimer(0.15, DelayedInventoryCheck, GetEventInt(event, "userid"));
 }
 
 public Action DelayedInventoryCheck(Handle timer, int ref){

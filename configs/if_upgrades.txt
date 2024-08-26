@@ -410,6 +410,16 @@
 			"initial_value"	"0"
 			"max"			"0.25"
 		}
+		"36"
+		{
+			"attribute"		"increase buff duration"
+			"name"			"Buff Duration Bonus"
+			"display"		"%.0f%%"
+			"cost"			"1"
+			"increment"		"0.35"
+			"initial_value"	"1"
+			"max"			"4.5"
+		}
 		//Canteen Stuff
 		"1000"
 		{
