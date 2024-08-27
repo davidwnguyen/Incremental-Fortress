@@ -374,7 +374,7 @@
 			"name"			"Effect Bar Recharge Bonus"
 			"display"		"%.1f%%"
 			"cost"			"1"
-			"increment"		"-0.2"
+			"increment"		"-0.5"
 			"initial_value"	"1"
 			"max"			"0.001"
 		}
