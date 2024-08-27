@@ -48,6 +48,10 @@ public Action TF2_OnTakeDamageModifyRules(int victim, int &attacker, int &inflic
 				damage += damage*((1+critRating/200.0)/(1+critNullify/200));
 			}
 		}
+
+		if(victim == attacker){
+			damage *= TF2Attrib_HookValueFloat(1.0, "self_damage_mult", victim);
+		}
 		PrintToChat(victim, "Final Damage: %.2f", damage);
 	}
 	return Plugin_Changed;

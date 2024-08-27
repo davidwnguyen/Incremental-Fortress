@@ -27,6 +27,7 @@
 			"Attr4"		"Damage Knockback Reduction"
 			"Attr5"		"Airblast Knockback Reduction"
 			"Attr6"		"Fall Damage Reduction"
+			"Attr7"		"Damage To Self Reduced"
 		}
 	}
 	"ammo_base"
@@ -215,11 +216,18 @@
 			"Attr2"		"Effect Bar Recharge Bonus"
 		}
 	}
-	"lunchbox_base"
+	"lunchbox_drink"
 	{
 		"Lunchbox Upgrades"
 		{
 			"Attr1"		"Effect Bar Recharge Bonus"
+		}
+	}
+	"lunchbox_base"
+	{
+		"Lunchbox Upgrades"
+		{
+			"Attr1"		"Recharge Bar Rate Bonus"
 		}
 	}
 	"shield"
@@ -281,13 +289,107 @@
 		}
 		"parent"		"base_utility"
 	}
-	"minigun"
+	"rescue_ranger"
 	{
-		"Minigun Upgrades"
+		"Rescue Ranger Upgrades"
 		{
 			"Attr1"		"Fire Rate Bonus"
-			"Attr2"		"Bullets Per Shot Bonus"
+			"Attr2"		"Reload Rate Bonus"
+			"Attr3"		"Clip Size Bonus"
 		}
 		"parent"		"base_utility"
+	}
+	"rescue_ranger"
+	{
+		"Rescue Ranger Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus"
+			"Attr2"		"Reload Rate Bonus"
+			"Attr3"		"Clip Size Bonus"
+		}
+		"parent"		"base_utility"
+	}
+	"wrangler"
+	{
+		"Wrangler Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus"
+		}
+	}
+	"syringe_gun"
+	{
+		"Syringe Gun Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus"
+			"Attr2"		"Reload Rate Bonus"
+			"Attr3"		"Clip Size Bonus"
+		}
+		"parent"		"base_utility"
+	}
+	"crossbow"
+	{
+		"Crossbow Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus"
+			"Attr2"		"Reload Rate Bonus"
+			"Attr3"		"Clip Size Bonus Additive"
+		}
+		"parent"		"base_utility"
+	}
+	"medigun"
+	{
+		"Medigun Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus"
+		}
+	}
+	"bow"
+	{
+		"Bow Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus"
+			"Attr2"		"Reload Rate Bonus"
+		}
+		"parent"		"base_utility"
+	}
+	"smg"
+	{
+		"SMG Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus"
+			"Attr2"		"Reload Rate Bonus"
+			"Attr3"		"Clip Size Bonus"
+			"Attr4"		"Bullets Per Shot Increased"
+		}
+		"parent"		"base_utility"
+	}
+	"carbine"
+	{
+		"parent"		"smg"
+	}
+	"revolver"
+	{
+		"Revolver Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus"
+			"Attr2"		"Reload Rate Bonus"
+			"Attr3"		"Clip Size Bonus"
+			"Attr4"		"Bullets Per Shot Increased"
+		}
+		"parent"		"base_utility"
+	}
+	"sapper"
+	{
+		"Sapper Upgrades"
+		{
+			"Attr1"		"Fire Rate Bonus"
+		}
+	}
+	"base_wearable"
+	{
+		"Wearable Upgrades"
+		{
+			"Attr1"		"Max Health Bonus"
+		}
 	}
 }

@@ -211,6 +211,16 @@
 			"initial_value"	"1"
 			"max"			"5"
 		}
+		"16.5"
+		{
+			"attribute"		"clip size upgrade"
+			"name"			"Clip Size Bonus Additive"
+			"display"		"%.0f"
+			"cost"			"1"
+			"increment"		"2"
+			"initial_value"	"1"
+			"max"			"11"
+		}
 		"17"
 		{
 			"attribute"		"sticky arm time upgrade"
@@ -419,6 +429,27 @@
 			"increment"		"0.35"
 			"initial_value"	"1"
 			"max"			"4.5"
+		}
+		"37"
+		{
+			"attribute"		"mult_item_meter_charge_rate"
+			"name"			"Recharge Bar Rate Bonus"
+			"display"		"%.1f%%"
+			"cost"			"1"
+			"increment"		"-0.5"
+			"initial_value"	"1"
+			"max"			"0.001"
+		}
+		"38"
+		{
+			"attribute"		"self damage mult"
+			"attr_class"	"self_damage_mult"
+			"name"			"Damage To Self Reduced"
+			"display"		"%.0f%%"
+			"cost"			"1"
+			"increment"		"-0.33"
+			"initial_value"	"1"
+			"max"			"0.1"
 		}
 		//Canteen Stuff
 		"1000"

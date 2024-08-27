@@ -36,7 +36,7 @@
         "tf_weapon_pistol"                          "pistol"
         "tf_weapon_pistol_scout"                    "pistol"
         "tf_weapon_handgun_scout_secondary"         "pistol"
-        "tf_weapon_lunchbox_drink"                  "lunchbox_base"
+        "tf_weapon_lunchbox_drink"                  "lunchbox_drink"
         "tf_weapon_jar_milk"                        "jar_base"
         "tf_weapon_cleaver"                         "cleaver"
         "tf_weapon_rocketlauncher"                  "rocket_launcher"
@@ -45,12 +45,12 @@
         "tf_weapon_rocketlauncher_airstrike"        "rocket_launcher"
         "tf_weapon_buff_item"                       "base_buff_item"
         "tf_weapon_raygun"                          "raygun"
-        "tf_weapon_parachute"                       "pistol"
+        "tf_weapon_parachute"                       "base_wearable"
         "tf_weapon_flamethrower"                    "flamethrower"
         "tf_weapon_rocketlauncher_fireball"         "fireball_launcher"
         "tf_weapon_flaregun"                        "flare_guns"
         "tf_weapon_flaregun_revenge"                "flare_guns"
-        "tf_weapon_rocketpack"                      "pistol"
+        "tf_weapon_rocketpack"                      "base_wearable"
         "tf_weapon_jar_gas"                         "jar_base"
         "tf_weapon_grenadelauncher"                 "grenade_launcher"
         "tf_weapon_cannon"                          "grenade_launcher"
@@ -59,36 +59,36 @@
         "tf_weapon_minigun"                         "minigun"
         "tf_weapon_lunchbox"                        "lunchbox_base"
         "tf_weapon_drg_pomson"                      "raygun"
-        "tf_weapon_shotgun_building_rescue"         "pistol"
-        "tf_weapon_laser_pointer"                   "pistol"
-        "tf_weapon_mechanical_arm"                  "pistol"
-        "tf_weapon_pda_engineer_build"              "pistol"
-        "tf_weapon_syringegun_medic"                "pistol"
-        "tf_weapon_crossbow"                        "pistol"
-        "tf_weapon_medigun"                         "pistol"
-        "tf_weapon_sniperrifle"                     "pistol"
-        "tf_weapon_sniperrifle_decap"               "pistol"
-        "tf_weapon_sniperrifle_classic"             "pistol"
-        "tf_weapon_compound_bow"                    "pistol"
-        "tf_weapon_smg"                             "pistol"
-        "tf_wearable_razorback"                     "pistol"
+        "tf_weapon_shotgun_building_rescue"         "rescue_ranger"
+        "tf_weapon_laser_pointer"                   "wrangler"
+        "tf_weapon_mechanical_arm"                  "short_circuit"
+        "tf_weapon_syringegun_medic"                "syringe_gun"
+        "tf_weapon_crossbow"                        "crossbow"
+        "tf_weapon_medigun"                         "medigun"
+        "tf_weapon_sniperrifle"                     "sniper_rifle"
+        "tf_weapon_sniperrifle_decap"               "sniper_rifle"
+        "tf_weapon_sniperrifle_classic"             "sniper_rifle"
+        "tf_weapon_compound_bow"                    "bow"
+        "tf_weapon_smg"                             "smg"
+        "tf_wearable_razorback"                     "base_wearable"
+        "tf_wearable"                               "base_wearable"
         "tf_weapon_jar"                             "jar_base"
-        "tf_weapon_charged_smg"                     "pistol"
-        "tf_weapon_revolver"                        "pistol"
-        "tf_weapon_builder"                         "pistol"
-        "tf_weapon_sapper"                          "pistol"
-        "tf_weapon_pda_spy"                         "pistol"
+        "tf_weapon_charged_smg"                     "carbine"
+        "tf_weapon_revolver"                        "revolver"
+        "tf_weapon_builder"                         "sapper"
+        "tf_weapon_sapper"                          "sapper"
+        "tf_weapon_pda_spy"                         "sapper"
         "base_utility"                              "base_utility"
         "ammo_base"                                 "ammo_base"
     }
     //Here are index based exceptions, ie: wearables, special weapons, etc.
     "Exceptions"
     {
-        "133"      "pistol" //Gunboats
-        "444"      "pistol" //Mantreads
-        "405"      "pistol" //Ali baba
-        "608"      "pistol" //Bootlegger
-        "231"      "pistol" //Darwins
-        "642"      "pistol" //Cozy camper
+        "133"      "base_wearable" //Gunboats
+        "444"      "base_wearable" //Mantreads
+        "405"      "base_wearable" //Ali baba
+        "608"      "base_wearable" //Bootlegger
+        "231"      "base_wearable" //Darwins
+        "642"      "base_wearable" //Cozy camper
     }
 }

@@ -1,7 +1,8 @@
 public Event_InventoryRefresh(Handle event, const char[] name, bool dontBroadcast){
     int client = GetClientOfUserId(GetEventInt(event, "userid"));
-    if(0 >= client > MaxClients)
+    if(0 < client < MaxClients){
         CancelClientMenu(client);
+    }
 
     //Add a little delay to hopefully add support for custom weapons?
     CreateTimer(0.15, DelayedInventoryCheck, GetEventInt(event, "userid"));
