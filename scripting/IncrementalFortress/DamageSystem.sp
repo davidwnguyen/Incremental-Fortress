@@ -1,7 +1,3 @@
-public Action TF2_OnTakeDamage(int victim, int &attacker, int &inflictor, float &damage, int &damagetype, int &weapon, float damageForce[3], float damagePosition[3], int damagecustom, CritType &critType) {
-	damagetype |= DMG_SLASH;
-	return Plugin_Changed;
-}
 public Action TF2_OnTakeDamageModifyRules(int victim, int &attacker, int &inflictor, float &damage, int &damagetype, int &weapon, float damageForce[3], float damagePosition[3], int damagecustom, CritType &critType){
 	float resist = 1.0, pierce = 0.0;
 	if(0 < victim <= MaxClients){
@@ -47,6 +43,11 @@ public Action TF2_OnTakeDamageModifyRules(int victim, int &attacker, int &inflic
 			}else{
 				damage += damage*((1+critRating/200.0)/(1+critNullify/200));
 			}
+		}
+
+		float AfterburnRating = TF2Attrib_HookValueFloat(0.0, "afterburn_rating", attacker);
+		if(AfterburnRating > 0){
+			
 		}
 
 		if(victim == attacker){

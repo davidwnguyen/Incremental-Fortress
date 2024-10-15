@@ -451,6 +451,17 @@
 			"initial_value"	"1"
 			"max"			"0.1"
 		}
+		"39"
+		{
+			"attribute"		"afterburn rating"
+			"attr_class"	"afterburn_rating"
+			"name"			"Afterburn Rating"
+			"display"		"%.0f"
+			"cost"			"1"
+			"increment"		"1"
+			"initial_value"	"0"
+			"max"			"15"
+		}
 		//Canteen Stuff
 		"1000"
 		{
