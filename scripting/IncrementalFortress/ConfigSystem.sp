@@ -85,7 +85,7 @@ int LoadUpgradeCategories(Handle kv, int level = 1){
                     }
 
                     if (SetTrieValue(WeaponListTrie, WeaponCategoryName[CategoryID], GetValue, false)){
-                        SetTrieValue(CategoryListTrie, Buffer, GetValue, false)
+                        SetTrieValue(CategoryListTrie, Buffer, GetValue, false);
                     }else{
                         PrintToServer("IF | Something went wrong trying to load the category of %s", Buffer);
                     }

@@ -45,8 +45,8 @@ public Action DelayedInventoryCheck(Handle timer, int ref){
         }
 
         if(CurrentWeaponDefinitions[client][i] != DefinitionID){
-            CurrentWeaponDefinitions[client][i] = DefinitionID;
             ResetUpgradesForSlot(client, i);
+            CurrentWeaponDefinitions[client][i] = DefinitionID;
         }
         if(CurrentWeaponEntities[client][i] != WeaponID){
             CurrentWeaponEntities[client][i] = WeaponID;

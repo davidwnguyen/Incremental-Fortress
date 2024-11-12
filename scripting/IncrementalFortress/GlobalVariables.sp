@@ -47,3 +47,9 @@ float TotalPoints;
 
 //Enum Structs
 Upgrade UpgradesArray[MaxAttributes];
+
+
+// Gameplay Mechanics //
+
+//Controls the amount of afterburn stacks & their damage on a player.
+ArrayList AfterburnLists[MAXPLAYERS];

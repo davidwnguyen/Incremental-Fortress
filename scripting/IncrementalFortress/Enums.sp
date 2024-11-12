@@ -12,3 +12,9 @@ enum struct Upgrade{
     char DisplayValue[64];
     char Description[256];
 }
+
+enum struct DOTTick{
+    int ownerReference;
+    int damageType;
+    float damage;
+}

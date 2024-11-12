@@ -27,6 +27,7 @@ void ResetUpgradesForSlot(int client, int slot){
 	if(!IsValidEntity(ItemEntity))
 		return;
 
+	CurrentWeaponDefinitions[client][slot] = -1;
 	CurrentWeaponIDs[client][slot] = 0;
 	CurrentPoints[client] += PointsSpentOnItem[client][slot];
 	PointsSpentOnItem[client][slot] = 0.0;

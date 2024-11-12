@@ -1,7 +1,3 @@
-/**
-*** okay gnutard
-**/
-
 #include <anymap>
 #include <sourcemod>
 #include <sdkhooks>
