@@ -4,6 +4,11 @@ public Action TF2_OnTakeDamageModifyRules(int victim, int &attacker, int &inflic
 		if(0 < attacker <= MaxClients){
 			pierce = TF2Attrib_HookValueFloat(0.0, "resistance_piercing", attacker);
 			damage *= GetDamagePointScaling();
+
+			float AfterburnRating = TF2Attrib_HookValueFloat(0.0, "afterburn_rating", attacker);
+			if(AfterburnRating > 0){
+				
+			}
 		}
 
 		//Vaccinator trash
@@ -45,15 +50,9 @@ public Action TF2_OnTakeDamageModifyRules(int victim, int &attacker, int &inflic
 			}
 		}
 
-		float AfterburnRating = TF2Attrib_HookValueFloat(0.0, "afterburn_rating", attacker);
-		if(AfterburnRating > 0){
-			
-		}
-
 		if(victim == attacker){
 			damage *= TF2Attrib_HookValueFloat(1.0, "self_damage_mult", victim);
 		}
-		PrintToChat(victim, "Final Damage: %.2f", damage);
 	}
 	return Plugin_Changed;
 }

@@ -64,7 +64,7 @@ void UpgradeMenuShowUpgrades(int client, int category, int menupos){
             
             Format(MaximumDisplayBuffer, sizeof(MaximumDisplayBuffer), UpgradesArray[Attribute].DisplayValue, StrContains(UpgradesArray[Attribute].DisplayValue, "%%") != -1 ? (UpgradesArray[Attribute].MaximumValue-UpgradesArray[Attribute].InitialValue)*100.0 : UpgradesArray[Attribute].MaximumValue-UpgradesArray[Attribute].InitialValue);
 
-            Format(Buffer, sizeof(Buffer), "%s | $%.0f\n\t%s%s\t[%s%s/%s]", UpgradesArray[Attribute].DisplayName[0] ? UpgradesArray[Attribute].DisplayName : UpgradesArray[Attribute].Name, TotalCost, Increment > 0 ? "+" : "", DisplayBuffer, Increment > 0 ? "+" : "", TotalDisplayBuffer, MaximumDisplayBuffer);
+            Format(Buffer, sizeof(Buffer), "%s | $%.0f\n  %s%s  [%s%s/%s]", UpgradesArray[Attribute].DisplayName[0] ? UpgradesArray[Attribute].DisplayName : UpgradesArray[Attribute].Name, TotalCost, Increment > 0 ? "+" : "", DisplayBuffer, Increment > 0 ? "+" : "", TotalDisplayBuffer, MaximumDisplayBuffer);
             AddMenuItem(UpgradeMenu, "upgrade", Buffer);
         }
     }

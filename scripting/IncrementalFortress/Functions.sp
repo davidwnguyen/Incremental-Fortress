@@ -24,13 +24,14 @@ void ResetUpgradesForSlot(int client, int slot){
 	if(slot == 4 || slot == 3)
 		ItemEntity = client;
 
-	if(!IsValidEntity(ItemEntity))
-		return;
-
 	CurrentWeaponDefinitions[client][slot] = -1;
 	CurrentWeaponIDs[client][slot] = 0;
 	CurrentPoints[client] += PointsSpentOnItem[client][slot];
 	PointsSpentOnItem[client][slot] = 0.0;
+
+	if(!IsValidEntity(ItemEntity))
+		return;
+
 	for(int i = 0;i < MaxAttributesPerItem; ++i){
 		if(UpgradeIDsOnItem[client][slot][i] != -1)
 			TF2Attrib_RemoveByName(ItemEntity, UpgradesArray[UpgradeIDsOnItem[client][slot][i]].AttributeName);
@@ -58,13 +59,15 @@ bool PurchaseUpgrade(int client, int slot, int SelectedUpgrade, int rate){
 		//just to shorten the formulas...
 		float scalefactor = UpgradesArray[SelectedUpgrade].CostIncreasePerUpgrade;
 		float currentCost = UpgradesArray[SelectedUpgrade].Cost + (scalefactor * UpgradeTimesOnItem[client][slot][Position]);
+		char upgradeName[64];
+		strcopy(upgradeName, sizeof(upgradeName), UpgradesArray[SelectedUpgrade].DisplayName[0] ? UpgradesArray[SelectedUpgrade].DisplayName : UpgradesArray[SelectedUpgrade].Name);
 		if(CurrentPoints[client] < currentCost){
-			PrintToChat(client, "Not enough points for %s.", UpgradesArray[SelectedUpgrade].Name);
+			PrintToChat(client, "Not enough points for %s.", upgradeName);
 			return false;
 		}
 		
 		if(IsUpgradeAtMaximum(client, slot, SelectedUpgrade)){
-			PrintToChat(client, "You have already reached the maximum value for %s.", UpgradesArray[SelectedUpgrade].Name);
+			PrintToChat(client, "You have already reached the maximum value for %s.", upgradeName);
 			return false;
 		}
 
@@ -188,6 +191,7 @@ void AwardPointsToPlayers(int amount){
 	TotalPoints += amount;
 	PrintToChatAll("Awarded %i Points to All Players.", amount);
 	PrintToChatAll("New Multipliers: %.2fx Health, %.2fx Damage, %.2fx Heal", GetHealthPointScaling(), GetDamagePointScaling(), GetHealingPointScaling());
+	//UpdatePlayerMaxHealth();
 }
 
 float GetHealthPointScaling(){
@@ -200,6 +204,15 @@ float GetHealingPointScaling(){
 	return Pow(1.06, TotalPoints) * 1+(0.03*TotalPoints);
 }
 
+/*void UpdatePlayerMaxHealth(){
+	for(int i = 1; i <= MaxClients; ++i){
+		if(!IsClientConnected(i))
+			continue;
+
+		int maxHP = GetPlayerInitialMaxHP(i);
+		TF2Attrib_SetByName(i, "max health additive penalty", maxHP * (GetHealthPointScaling() - 1));
+	}
+}*/
 int GetPositionOfAttribute(int client, int slot, int SelectedUpgrade, bool ShouldSeek = true){
 	int Position = SearchArray(UpgradeIDsOnItem[client][slot], MaxAttributesPerItem, SelectedUpgrade);
 	if(ShouldSeek && Position == -1)
@@ -287,6 +300,26 @@ stock void SendItemInfo(int client, const char[] text)
 	BfWriteString(hBuffer, itemText);
 	EndMessage();
 }
+
+/*int GetPlayerInitialMaxHP(int client){
+	int maxHP = 0;
+	switch(TF2_GetPlayerClass(client)){
+		case TFClass_Scout, TFClass_Sniper, TFClass_Spy: {maxHP = 125;}
+		case TFClass_Soldier: {maxHP = 200;}
+		case TFClass_Pyro, TFClass_DemoMan: {maxHP = 175;}
+		case TFClass_Heavy: {maxHP = 300;}
+		case TFClass_Engineer, TFClass_Medic: {maxHP = 150;}
+	}
+	for(int slot = 0; slot < MaxSlots; ++slot){
+		int weapon = TF2Util_GetPlayerLoadoutEntity(client, slot);
+		if(!IsValidEntity(weapon))
+			continue;
+
+		//maxHP += TF2Attrib_HookValueInt(0, "add_maxhealth", weapon);
+	}
+	PrintToServer("%i", maxHP);
+	return maxHP;
+}*/
 
 /*
 float GetAttributeValue(int entity, char[] name, float init=1.0){

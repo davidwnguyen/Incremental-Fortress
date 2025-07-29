@@ -10,6 +10,7 @@
 	//	description		- Gives a key hint to the player when upgrading this attribute. [] brackets determine a formula, and using {VALUE} will fill in as a placeholder for the value of the attribute.
 	//	cost 			- The base cost of the upgrade.
 	//	overcost 		- The increase of cost per each time upgraded.
+	// 	increment 		- The increase of value per upgrade.
 	//	initial_value 	- The initial value of the attribute
 	//	max 			- This finalizes the attribute and determines the cap of the upgrade (going both negative and positive)
 	//////////////////////////////////////////////
@@ -327,15 +328,15 @@
 		}
 		"27"
 		{
-			"attribute"		"bullets per shot mult"
+			"attribute"		"bullets per shot additive"
 			"attr_class"	"mult_bullets_per_shot"
 			"name"			"Bullets Per Shot Increased"
 			"display"		"%.0f"
 			"cost"			"4"
 			"overcost"		"1"
 			"increment"		"1"
-			"initial_value"	"1"
-			"max"			"4"
+			"initial_value"	"0"
+			"max"			"2"
 		}
 		"28"
 		{
